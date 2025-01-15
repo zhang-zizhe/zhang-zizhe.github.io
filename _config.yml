@@ -58,6 +58,15 @@ max_width: 930px
 # TODO: add layout settings (single page vs. multi-page)
 
 # -----------------------------------------------------------------------------
+# Open Graph & Schema.org
+# -----------------------------------------------------------------------------
+# Display links to the page with a preview object on social media.
+# see https://schema.org/docs/faq.html for more information
+serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_schema_org: false # Include Schema.org in the HTML head
+og_image: # The site-wide (default for all links) Open Graph preview image
+
+# -----------------------------------------------------------------------------
 # Social integration
 # -----------------------------------------------------------------------------
 
@@ -66,15 +75,9 @@ linkedin_username: zizhe-zhang # your LinkedIn user name
 scholar_userid: 0OY7JKAAAAAJ # your Google Scholar ID
 github_username: marszhaang # your GitHub user name
 
+contact_note: >
+  You can even add a little note about which of these is the best way to reach you.
 
-# -----------------------------------------------------------------------------
-# Open Graph & Schema.org
-# -----------------------------------------------------------------------------
-# Display links to the page with a preview object on social media.
-# see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
