@@ -12,8 +12,9 @@ layout: default
           target="_blank"
           rel="noopener noreferrer"
           class="float-right"
-          ><i class="fa-solid fa-file-pdf"></i
-        ></a>
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
       {% endif %}
     </h1>
     {% if page.description %}
@@ -23,12 +24,13 @@ layout: default
 
   <article>
     {% if page.cv_pdf %}
-      <iframe 
-        src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" 
-        width="100%" 
-        height="800px" 
-        style="border: none;">
-      </iframe>
+      <!-- 使用 aspect-ratio 实现自适应宽高比 -->
+      <div style="position: relative; width: 100%; aspect-ratio: 17 / 22;">
+        <iframe 
+          src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+        </iframe>
+      </div>
     {% else %}
       <p>No CV PDF available. Please check back later.</p>
     {% endif %}
