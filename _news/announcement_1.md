@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Resubmitted my revised paper to IEEE RA-L.
+Resubmitted my revised version of paper to IEEE RA-L.
