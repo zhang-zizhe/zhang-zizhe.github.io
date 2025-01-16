@@ -201,6 +201,7 @@ exclude:
 keep_files:
   - CNAME
   - .nojekyll
+  - old/
 
 # Plug-ins
 plugins:
