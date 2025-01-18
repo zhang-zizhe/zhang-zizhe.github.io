@@ -25,7 +25,9 @@ span,
 strong {
   color: var(--global-text-color);
   font-family: Optima, Georgia, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+}
+.btn {
+  font-family: Roboto, 'Open Sans', sans-serif;
 }
 
 hr {
@@ -798,11 +800,12 @@ footer.sticky-bottom {
       .links {
         a.btn {
           color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          border: 2px solid var(--global-text-color);
+          border-radius: 15px;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          padding-top: .25rem;
+          padding-bottom: .25rem;
           margin-left: 0;
 
           &:hover {
