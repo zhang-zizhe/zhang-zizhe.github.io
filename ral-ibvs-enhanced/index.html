@@ -119,15 +119,19 @@
             margin-right: 8px;
         }
         .bibtex {
-        text-align: left;  /* 左对齐 */
-        font-family: "Courier New", Courier, monospace; /* 经典编程字体 */
-        font-size: 14px; /* 适当调整字体大小 */
-        background-color: #f8f8f8; /* 轻微灰色背景 */
-        padding: 0px 10px; /* 让内容与边框有间距 */
-        border-radius: 5px; /* 让边角稍微圆润 */
-        border: 1px solid #ccc; /* 添加浅色边框 */
-        display: block; /* 让框体只包裹内容 */
-    }
+            text-align: left;  /* 左对齐 */
+            font-family: "Courier New", Courier, monospace; /* 经典编程字体 */
+            font-size: 14px; /* 适当调整字体大小 */
+            background-color: #f8f8f8; /* 轻微灰色背景 */
+            padding: 10px; /* 让内容与边框有间距 */
+            border-radius: 5px; /* 让边角稍微圆润 */
+            border: 1px solid #ccc; /* 添加浅色边框 */
+            display: block; /* 让框体只包裹内容 */
+            white-space: pre-wrap; /* ✅ 自动换行 */
+            word-wrap: break-word; /* ✅ 兼容不同浏览器的换行方式 */
+            overflow-x: auto; /* ✅ 仅在需要时才出现横向滚动条 */
+            max-width: 100%; /* ✅ 防止超出父容器 */
+        }
         /* 响应式设计：当屏幕宽度小于 768px 时，所有视频占据整行 */
         @media (max-width: 768px) {
             .video-item, .video-item-large {
