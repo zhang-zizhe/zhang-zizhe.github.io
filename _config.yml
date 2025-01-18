@@ -202,6 +202,7 @@ keep_files:
   - CNAME
   - .nojekyll
   - old/
+  - ral-ibvs-enhanced/
 
 # Plug-ins
 plugins:
