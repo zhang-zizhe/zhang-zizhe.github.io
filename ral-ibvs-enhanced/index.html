@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBVS for Enhanced Cooperation of Dual-Arm Manipulation</title>
+    <!-- Font Awesome (用于 PDF, YouTube, arXiv 图标) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- arXiv Logo -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <style>
+        body {
+            font-family: Optima, Georgia, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            text-align: left;
+            font-size: 22px;
+        }
+        h4 {
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        author {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        author2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #444; /* 深蓝色 */
+            text-decoration: none; /* 可选：去掉默认下划线 */
+        }
+        a:hover {
+            color: #999; /* 鼠标悬停时的颜色（亮蓝色） */
+        }
+	a:hover {
+            color: #666; /* 鼠标悬停时的颜色（亮蓝色） */
+        }
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-item {
+            flex: 1 1 calc(33.33% - 20px); /* 第一行 3 个视频 */
+            max-width: 32%;
+            text-align: center;
+        }
+        .video-item-large {
+            flex: 1 1 calc(50% - 20px); /* 第二行 2 个视频 */
+            max-width: 49%;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .caption {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+        .container {
+            max-width: 1200px; /* 最大宽度不超过 1200px */
+            width: 70vw; /* 宽度占屏幕的 70% */
+            margin: 0 auto;
+        }
+        .abstract-box {
+            margin: 20px auto; /* 居中对齐 */
+            padding: 0px 20px;     /* 增加内边距，保持方块完整 */
+            border: 2px solid black; /* 添加边框 */
+            background-color: #f8f8f8; /* 轻微灰色背景，像 LaTeX */
+            text-align: justify; /* 两端对齐，让文本更整齐 */
+            line-height: 1.4; /* 增加行间距，提高可读性 */
+            border-radius: 8px; /* 让边角稍微圆滑 */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影，提高立体感 */
+        }
+        .button-container {
+            text-align: center; /* 让按钮居中 */
+            margin-top: 20px;
+        }
+
+        /* 按钮样式 */
+        .link-block {
+            display: inline-block;
+
+            margin: 10px 5px;
+        }
+        .external-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: 'Roboto', 'Open Sans', sans-serif;
+            color: white;
+            background-color: #444;
+            border: none;
+            border-radius: 30px; /* 圆角 */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .external-link:hover {
+            background-color: #ccc; /* 悬停时变浅 */
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .bibtex {
+            text-align: left;  /* 左对齐 */
+            font-family: "Courier New", Courier, monospace; /* 经典编程字体 */
+            font-size: 14px; /* 适当调整字体大小 */
+            background-color: #f8f8f8; /* 轻微灰色背景 */
+            padding: 0px 10px; /* 让内容与边框有间距 */
+            border-radius: 5px; /* 让边角稍微圆润 */
+            border: 1px solid #ccc; /* 添加浅色边框 */
+            display: block; /* 让框体只包裹内容 */
+            white-space: pre-wrap; /* ✅ 自动换行 */
+            word-wrap: break-word; /* ✅ 兼容不同浏览器的换行方式 */
+            overflow-x: auto; /* ✅ 仅在需要时才出现横向滚动条 */
+            max-width: 100%; /* ✅ 防止超出父容器 */
+        }
+        /* 响应式设计：当屏幕宽度小于 768px 时，所有视频占据整行 */
+        @media (max-width: 768px) {
+            .video-item, .video-item-large {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Image-Based Visual Servoing for Enhanced Cooperation of Dual-Arm Manipulation</h1>
+        <br>
+        <author><a href="https://zizhe.io/" target="_blank">Zizhe Zhang</a><sup>1</sup>, Yuan Yang<sup>*2</sup>, Wenqiang Zuo<sup>2</sup>, Guangming Song<sup>2</sup>, Aiguo Song<sup>2</sup>, Yang Shi<sup>3</sup></author>
+        <br><br>
+        <author2><sup>*</sup>Corresponding Author, <sup>1</sup>University of Pennsylvania, <sup>2</sup>Southeast University, <sup>3</sup>University of Victoria</author2>
+        <div class="button-container">
+        <!-- PDF Link -->
+        <span class="link-block">
+            <a href="./assets/MS.pdf"
+               class="external-link" target="_blank">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+            </a>
+        </span>
+
+        <!-- arXiv Link -->
+        <span class="link-block">
+            <a href="https://arxiv.org/abs/2410.19432"
+               class="external-link" target="_blank">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+            </a>
+        </span>
+    </div>
+        <h2>Abstract</h2>
+        <div class="abstract-box">
+            <p>
+            The cooperation of a pair of robot manipulators is required to manipulate a target object without any fixtures. The conventional control methods coordinate the end-effector pose of each manipulator with that of the other using their kinematics and joint coordinate measurements. Yet, the manipulators' inaccurate kinematics and joint coordinate measurements can cause significant pose synchronization errors in practice. This paper thus proposes an image-based visual servoing approach for enhancing the cooperation of a dual-arm manipulation system. On top of the classical control, the visual servoing controller lets each manipulator use its carried camera to measure the image features of the other's marker and adapt its end-effector pose with the counterpart on the move. Because visual measurements are robust to kinematic errors, the proposed control can reduce the end-effector pose synchronization errors and the fluctuations of the interaction forces of the pair of manipulators on the move. Theoretical analyses have rigorously proven the stability of the closed-loop system. Comparative experiments on real robots have substantiated the effectiveness of the proposed control.
+            </p>
+        </div>
+        
+        <br>
+        <h2>Experimental Results</h2>
+        <h3>Paths Display</h3>
+        <br>
+        <!-- 第一行：3 个视频 -->
+        <div class="video-grid">
+            <div class="video-item">
+                <video controls>
+                    <source src="./assets/vds/path1.mp4" type="video/mp4">
+                    您的浏览器不支持 HTML5 视频。
+                </video>
+                <p class="caption">Path 1</p>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="./assets/vds/path2.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="caption">Path 2</p>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="./assets/vds/path3.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="caption">Path 3</p>
+            </div>
+        </div>
+		<br>
+        <h3>Control Comparison</h3>
+        <!-- 第二行：2 个视频 -->
+        <div class="video-grid">
+            <div class="video-item-large">
+                <video controls>
+                    <source src="./assets/vds/path1_comparison.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="caption">Path 1</p>
+            </div>
+            <div class="video-item-large">
+                <video controls>
+                    <source src="./assets/vds/path3_comparison.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="caption">Path 3</p>
+            </div>
+        </div>
+<!-- 引入 Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bibtex.min.js"></script>
+
+<br><br><br>
+<h4>BibTex</h4>
+<pre class="bibtex">
+<code>
+@misc{zhang2024imagebasedvisualservoingenhanced,
+      title={Image-Based Visual Servoing for Enhanced Cooperation of Dual-Arm Manipulation}, 
+      author={Zizhe Zhang and Yuan Yang and Wenqiang Zuo and Guangming Song and Aiguo Song and Yang Shi},
+      year={2024},
+      eprint={2410.19432},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2410.19432}, 
+}
+</code>
+</pre>
+
+
+
+
+    </div>
+
+</body>
+</html>
