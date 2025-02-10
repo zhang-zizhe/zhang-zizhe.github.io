@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-01-15 00:00:00-0400
+date: 2025-02-10 00:00:00-0400
 inline: true
 related_posts: false
 ---
 
-Resubmitted my revised version of paper to IEEE RA-L.
+I’m exciting to share that my first journal paper has been accepted to IEEE RA-L today!
