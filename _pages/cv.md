@@ -4,5 +4,5 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 3
-cv_pdf: CV_2_17.pdf # you can also use external links here
+cv_pdf: CV_2_18.pdf # you can also use external links here
 ---
