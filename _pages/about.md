@@ -6,7 +6,7 @@ subtitle: 张 Zhang /draŋ/  子哲 Zizhe /dzɪ drɜː/<br>Robotics Researcher
 
 profile:
   align: right
-  image: zzz.jpg
+  image: IMG_5699.JPG
   image_circular: false # crops the image to make it circular
   
 
