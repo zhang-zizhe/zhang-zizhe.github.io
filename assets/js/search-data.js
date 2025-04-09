@@ -375,8 +375,8 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-finished-and-submitted-my-first-paper-to-ieee-ra-l",
-          title: 'Finished and submitted my first paper to IEEE RA-L.',
+    },{id: "news-i-m-excited-to-be-joining-the-dexlab-at-duke-university-as-a-visiting-scholar-starting-june-1st-under-the-supervision-of-prof-xianyi-cheng",
+          title: 'I’m excited to be joining the DexLab at Duke University as a Visiting...',
           description: "",
           section: "News",},{id: "news-joined-figueroa-robotics-lab-penn",
           title: 'Joined Figueroa Robotics Lab @ Penn.',
