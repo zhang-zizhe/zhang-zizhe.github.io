@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined Figueroa Robotics Lab @ Penn.
+Joined [Figueroa Robotics Lab @ Penn](https://github.com/penn-figueroa-lab).
