@@ -1,9 +1,9 @@
 ---
 layout: post
 title: A long announcement with details
-date: 2024-10-25 00:00:00-0400
+date: 2024-04-09 00:00:00-0400
 inline: true
 related_posts: false
 ---
 
-Finished and submitted my first paper to IEEE RA-L.
+I’m excited to be joining the [DexLab](https://dexlab.pratt.duke.edu/) at Duke University as a Visiting Scholar, starting June 1st, under the supervision of [Prof. Xianyi Cheng](https://xianyicheng.github.io/).
