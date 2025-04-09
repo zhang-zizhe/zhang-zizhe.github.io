@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I’m exciting to share that my first journal paper has been accepted to IEEE RA-L today!
+I’m excited to share that my first journal paper has been accepted to IEEE RA-L today!
