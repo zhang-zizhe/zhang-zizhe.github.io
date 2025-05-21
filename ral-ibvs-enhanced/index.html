@@ -97,13 +97,17 @@
         }
 	.button-container {
             text-align: center; /* 让按钮居中 */
-            margin-top: 40px;
+            margin-top: 35px;
         }
         .button-container2 {
             text-align: center; /* 让按钮居中 */
             margin-top: 20px;
         }
-
+	.button-wrapper {
+	  display: flex;
+	  align-items: center;      /* 垂直居中 */
+	  gap: 10px;                /* 元素之间的间距 */
+	}
         /* 按钮样式 */
         .link-block {
             display: inline-block;
@@ -161,46 +165,32 @@
         <author><a href="https://zizhe.io/" target="_blank">Zizhe Zhang</a><sup>1</sup>, Yuan Yang<sup>*2</sup>, Wenqiang Zuo<sup>2</sup>, Guangming Song<sup>2</sup>, Aiguo Song<sup>2</sup>, Yang Shi<sup>3</sup></author>
         <br><br>
         <author2><sup>*</sup>Corresponding Author, <sup>1</sup>University of Pennsylvania, <sup>2</sup>Southeast University, <sup>3</sup>University of Victoria</author2>
-	<div class="button-container">
-		
-
-        <!-- IEEE Link -->
-        <span class="link-block">
-            <a href="https://ieeexplore.ieee.org/document/10891400"
-               class="external-link" target="_blank">
-                <span class="icon">
-                    <i class="ai ai-ieee"></i>
-                </span>
-                <span>IEEE Xplore</span>
-            </a>
-        </span>
-    </div>
-        <div class="button-container2">
-		
-        <!-- PDF Link -->
-	<!--
-        <span class="link-block">
-            <a href="./assets/MS.pdf"
-               class="external-link" target="_blank">
-                <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                </span>
-                <span>Paper</span>
-            </a>
-        </span>
-	-->
-
-        <!-- arXiv Link -->
-        <span class="link-block">
-            <a href="https://arxiv.org/abs/2410.19432"
-               class="external-link" target="_blank">
-                <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                </span>
-                <span>arXiv</span>
-            </a>
-        </span>
-    </div>
+	<div class="button-wrapper">
+	    <div class="button-container">
+	        <!-- IEEE Link -->
+	        <span class="link-block">
+	            <a href="https://ieeexplore.ieee.org/document/10891400"
+	               class="external-link" target="_blank">
+	                <span class="icon">
+	                    <i class="ai ai-ieee"></i>
+	                </span>
+	                <span>IEEE Xplore</span>
+	            </a>
+	        </span>
+	    </div>
+	    <div class="button-container2">
+		<!-- arXiv Link -->
+		<span class="link-block">
+		        <a href="https://arxiv.org/abs/2410.19432"
+		        class="external-link" target="_blank">
+		        <span class="icon">
+		                <i class="ai ai-arxiv"></i>
+		        </span>
+			<span>arXiv</span>
+		    </a>
+	    	</span>
+	    </div>
+	</div>
         <h2>Abstract</h2>
         <div class="abstract-box">
             <p>
