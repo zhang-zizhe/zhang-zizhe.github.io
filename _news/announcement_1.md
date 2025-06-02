@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I’m excited to share that my first journal [paper](https://ieeexplore.ieee.org/abstract/document/10891400) has been accepted to IEEE RA-L today!
+My first journal [paper](https://ieeexplore.ieee.org/abstract/document/10891400) has been accepted to IEEE RA-L today!
