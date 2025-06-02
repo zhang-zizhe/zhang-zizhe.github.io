@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined [Figueroa Robotics Lab @ Penn](https://github.com/penn-figueroa-lab), under the supervision of [Prof. Nadia Figueroa]([https://github.com/penn-figueroa-lab](https://nbfigueroa.github.io/)).
+Joined [Figueroa Robotics Lab @ Penn](https://github.com/penn-figueroa-lab), under the supervision of [Prof. Nadia Figueroa](https://nbfigueroa.github.io/).
