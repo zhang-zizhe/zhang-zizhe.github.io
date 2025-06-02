@@ -375,8 +375,8 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-joined-figueroa-robotics-lab-penn",
-          title: 'Joined Figueroa Robotics Lab @ Penn.',
+    },{id: "news-joined-figueroa-robotics-lab-penn-under-the-supervision-of-prof-nadia-figueroa",
+          title: 'Joined Figueroa Robotics Lab @ Penn, under the supervision of Prof. Nadia Figueroa....',
           description: "",
           section: "News",},{id: "news-my-first-journal-paper-has-been-accepted-to-ieee-ra-l-today",
           title: 'My first journal paper has been accepted to IEEE RA-L today!',
