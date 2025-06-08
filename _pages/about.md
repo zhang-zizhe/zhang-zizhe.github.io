@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: 张 Zhang /draŋ/  子哲 Zizhe /dzɪ drɜː/<br>Robotics Researcher
+subtitle: 张 Zhang /dʒɑːŋ/  子哲 Zizhe /dzɪː dʒɜ/<br>Robotics Researcher
 
 profile:
   align: right
