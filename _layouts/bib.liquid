@@ -31,8 +31,7 @@
 
         {%- comment -%} 如果是 MP4 视频 {%- endcomment -%}
         {% if ext == '.mp4' %}
-            {% assign video_src = entry.preview | prepend: '/assets/publication_preview/' %}
-          {% endif %}
+          {% assign video_src = entry.preview | prepend: '/assets/publication_preview/' %}
           <video
             class="preview z-depth-1 rounded"
             autoplay muted loop playsinline
@@ -54,7 +53,6 @@
             zoomable=true
             alt=entry.preview
           %}
-          {% endif %}
         {% endif %}
       {% endif %}
 
