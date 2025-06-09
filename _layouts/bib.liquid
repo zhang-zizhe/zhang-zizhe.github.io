@@ -28,23 +28,23 @@
       {% if entry.preview %}
         {% if entry.preview contains '://' and entry.preview ends_with '.mp4' %}
           <!-- 外部 MP4 视频 -->
-          <video class="preview z-depth-1 rounded" controls muted loop>
-            <source src="{{ entry.preview }}" type="video/mp4">
-            您的浏览器不支持 video 标签。
+          <video class="preview z-depth-1 rounded" autoplay muted loop playsinline>
+            <source src="{{ entry.preview }}" type="video/mp4">         
+            Your browser does not support the video tag.
           </video>
         {% elsif entry.preview contains '://' %}
           <!-- 外部图片 -->
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% elsif entry.preview ends_with '.mp4' %}
           <!-- 本地 MP4 视频 -->
-          {% assign video_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          <video class="preview z-depth-1 rounded" controls muted loop>
+          {% assign video_path = entry.preview | prepend: '/assets/publication_preview/' %}
+          <video class="preview z-depth-1 rounded" autoplay muted loop playsinline>
             <source src="{{ video_path }}" type="video/mp4">
-            您的浏览器不支持 video 标签。
+            Your browser does not support the video tag.
           </video>
         {% else %}
           <!-- 本地图片 -->
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% assign entry_path = entry.preview | prepend: '/assets/publication_preview/' %}
           {% include figure.liquid
              loading="eager"
              path=entry_path
