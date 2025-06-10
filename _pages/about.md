@@ -8,7 +8,7 @@ profile:
   align: right
   image: IMG_5699.JPG
   image_circular: false # crops the image to make it circular
-  more_info: La Jolla, CA
+  more_info: 	<p>La Jolla, CA</p>
   
 
 news: true # includes a list of news items
