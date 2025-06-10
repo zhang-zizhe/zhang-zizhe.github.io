@@ -43,16 +43,14 @@
 
         {%- comment -%} 否则当成图片处理 {%- endcomment -%}
         {% else %}
-          <!-- 本地图片，通过 figure.liquid 增强响应式及懒加载 -->
-          {% assign image_path = entry.preview | prepend: '/assets/publication_preview/' %}
-          {% include figure.liquid
-            loading="eager"
-            path=image_path
-            sizes="200px"
+          {% assign image_src = entry.preview | prepend: '/assets/publication_preview/' %}
+          <img
             class="preview z-depth-1 rounded"
-            zoomable=true
-            alt=entry.preview
-          %}
+            src="{{ image_src }}"
+            alt="{{ entry.preview }}"
+            loading="eager"
+            style="width:100%; height:auto; display:block;"
+          />
         {% endif %}
       {% endif %}
 
