@@ -262,7 +262,8 @@
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+        {% comment %} <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a> {% endcomment %}
+        <a href="{{ entry.website }}">Website</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
