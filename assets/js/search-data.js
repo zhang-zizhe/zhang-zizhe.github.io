@@ -376,7 +376,7 @@ ninja.data = [{
         
       },
     },{id: "news-joined-figueroa-robotics-lab-penn-under-the-supervision-of-prof-nadia-figueroa",
-          title: 'Joined Figueroa Robotics Lab@Penn, under the supervision of Prof. Nadia Figueroa.',
+          title: 'Joined Figueroa Robotics Lab @ Penn, under the supervision of Prof. Nadia Figueroa....',
           description: "",
           section: "News",},{id: "news-my-first-journal-paper-has-been-accepted-to-ieee-ra-l-today",
           title: 'My first journal paper has been accepted to IEEE RA-L today!',
