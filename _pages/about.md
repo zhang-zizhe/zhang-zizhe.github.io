@@ -6,8 +6,9 @@ subtitle: 张 Zhang /d͡ʒɑːŋ/  子哲 Zizhe /ˌd͡ziːˈd͡ʒə/<br>Robotics
 
 profile:
   align: right
-  image: IMG_1436.jpeg
+  image: IMG_5699.JPG
   image_circular: false # crops the image to make it circular
+  more_info: La Jolla, CA
   
 
 news: true # includes a list of news items
