@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-I am joining the [DexLab](https://dexlab.pratt.duke.edu/) at Duke University as a Visiting Scholar, from June to August, under the supervision of [Prof. Xianyi Cheng](https://xianyicheng.github.io/).
+Joined the [DexLab](https://dexlab.pratt.duke.edu/) at Duke University as a Visiting Scholar till August, under the supervision of [Prof. Xianyi Cheng](https://xianyicheng.github.io/).
