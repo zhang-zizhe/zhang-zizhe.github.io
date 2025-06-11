@@ -210,7 +210,7 @@
       {% endif %}
       {% if entry.arxiv %}
         {% comment %} <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a> {% endcomment %} 
-        <strong><i><a href="http://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a></i></strong> /
+        <i><a href="http://arxiv.org/abs/{{ entry.arxiv }}" style="font-weight: 600;">arXiv</a></i> /
       {% endif %}
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
@@ -263,7 +263,7 @@
       {% endif %}
       {% if entry.website %}
         {% comment %} <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a> {% endcomment %}
-        <strong><i><a href="{{ entry.website }}">Website</a></i></strong>
+        <strong><i><a href="{{ entry.website }} style="font-weight: 600;"">Website</a></i></strong>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
