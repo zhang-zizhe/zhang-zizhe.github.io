@@ -224,9 +224,9 @@
       {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
-          <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          <i><a href="{{ entry.pdf }}" style="font-weight: 600;">pdf</a></i> /
         {% else %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          <i><a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" style="font-weight: 600;">pdf</a></i> /
         {% endif %}
       {% endif %}
       {% if entry.supp %}
