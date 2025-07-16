@@ -17,4 +17,4 @@ social: false # includes social icons at the bottom of the page
 
 I'm currently a first-year Robotics MSE student at the [GRASP Lab](https://www.grasp.upenn.edu/), advised by [Prof. Nadia Figueroa](https://nbfigueroa.github.io/). I also work as a research assistant at [Figueroa Robotics Lab@Penn](https://github.com/penn-figueroa-lab). Previously, I received my bachelor's degree in Measurement and Control Technology and Instruments from [Southeast University](https://www.seu.edu.cn/), advised by [Prof. Yuan Yang](https://ins.seu.edu.cn/yy2/list.htm).
 
-My research interests encompass Control Theory, Robot Learning, Human-Robot Interaction, and Task/Motion Planning.
+My research interests encompass Control Theory, Robot Learning, Human-Robot Interaction, and Neuro‑Symbolic.
