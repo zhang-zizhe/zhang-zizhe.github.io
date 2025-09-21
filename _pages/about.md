@@ -6,7 +6,7 @@ subtitle: 张 Zhang /d͡ʒɑːŋ/  子哲 Zizhe /ˌd͡ziːˈd͡ʒə/<br>Robotics
 
 profile:
   align: right
-  image: IMG_1198.jpg
+  image: IMG_3002.jpg
   image_circular: false # crops the image to make it circular
   
 
