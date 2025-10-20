@@ -388,7 +388,7 @@ ninja.data = [{
           title: 'I will serve as a volunteer in RSS 2025, Los Angeles.',
           description: "",
           section: "News",},{id: "news-i-am-excited-to-share-that-our-work-vpp-tc-received-the-trophy-best-student-paper-award-at-iros-workshop-on-building-safe-robots-2025",
-          title: 'I am excited to share that our work VPP-TC received the :trophy: Best...',
+          title: 'I am excited to share that our work VPP-TC received the :trophy:Best Student...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
