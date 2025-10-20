@@ -198,9 +198,10 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
-        <a class="award btn btn-sm z-depth-0" role="button">
+        {% comment %}<a class="award btn btn-sm z-depth-0" role="button">
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
-        </a>
+        </a>{% endcomment %}
+        <i><a href="https://zizhe.io/assets/awards/{{ entry.award }}" style="font-weight: 500;">Award</a></i> /
       {% endif %}
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
