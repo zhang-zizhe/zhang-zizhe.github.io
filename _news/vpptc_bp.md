@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am excited to share that our work [VPP-TC](https://vpp-tc.github.io/webpage/) received the :trophy:***Best Student Paper Award*** at IROS Workshop on [Building Safe Robots](https://building-safe-robots-workshop.github.io/), 2025.
+I am excited to share that our work [VPP-TC](https://vpp-tc.github.io/webpage/) received the 🏆***Best Student Paper Award*** at IROS Workshop on [Building Safe Robots](https://building-safe-robots-workshop.github.io/), 2025.
