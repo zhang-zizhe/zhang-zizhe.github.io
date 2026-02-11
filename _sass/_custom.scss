@@ -1,3 +1,4 @@
+
 .affiliation_logos {
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +52,9 @@
 .affiliation_logos img.only-light { display: block; }
 
 /* 系统深色模式下只显示深色版本 */
+html[data-theme="dark"] .affiliation_logos img.only-dark { display: block; }
+html[data-theme="dark"] .affiliation_logos img.only-light { display: none; }
+
 @media (prefers-color-scheme: dark) {
   .affiliation_logos img.only-dark { display: block; }
   .affiliation_logos img.only-light { display: none; }
