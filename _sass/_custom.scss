@@ -19,7 +19,7 @@
 .affiliation_logos img {
   height: clamp(45px, 7vw, 70px);
   width: auto;
-  display: block;
+  // display: block;
   // filter: grayscale(100%);
   opacity: 0.85;
 }
@@ -27,7 +27,7 @@
 .affiliation_logos img.work {
   height: clamp(39px, 6vw, 60px);
   width: auto;
-  display: block;
+  // display: block;
   // filter: grayscale(100%);
   opacity: 0.85;
 }
@@ -42,19 +42,19 @@
   height: 0;
 }
 
-/* =========================
-   Light or Dark logo switch
-   ========================= */
+// /* =========================
+//    Light or Dark logo switch
+//    ========================= */
 
-/* 默认只显示浅色版本 */
-.affiliation_logos img.only-dark { display: none; }
-.affiliation_logos img.only-light { display: block; }
+// /* 默认只显示浅色版本 */
+// .affiliation_logos img.only-dark { display: none; }
+// .affiliation_logos img.only-light { display: block; }
 
-/* 系统深色模式下只显示深色版本 */
-@media (prefers-color-scheme: dark) {
-  .affiliation_logos img.only-dark { display: block; }
-  .affiliation_logos img.only-light { display: none; }
-}
+// /* 系统深色模式下只显示深色版本 */
+// @media (prefers-color-scheme: dark) {
+//   .affiliation_logos img.only-dark { display: block; }
+//   .affiliation_logos img.only-light { display: none; }
+// }
 
 // @media (prefers-color-scheme: dark) {
 //   .affiliation_logos a {
