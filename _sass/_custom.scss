@@ -17,7 +17,15 @@
 }
 
 .affiliation_logos img {
-  height: clamp(50px, 10vw, 100px);
+  height: clamp(45px, 7vw, 70px);
+  width: auto;
+  display: block;
+  // filter: grayscale(100%);
+  opacity: 0.85;
+}
+
+.affiliation_logos img.work {
+  height: clamp(39px, 6vw, 60px);
   width: auto;
   display: block;
   // filter: grayscale(100%);
