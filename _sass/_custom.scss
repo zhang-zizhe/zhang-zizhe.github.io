@@ -47,21 +47,16 @@
    Light or Dark logo switch
    ========================= */
 
-/* 默认只显示浅色版本 */
+/* 默认（浅色） */
 .affiliation_logos img.only-dark { display: none; }
 .affiliation_logos img.only-light { display: block; }
 
-/* 系统深色模式下只显示深色版本 */
+/* 手动切换深色 */
 html[data-theme="dark"] .affiliation_logos img.only-dark { display: block; }
 html[data-theme="dark"] .affiliation_logos img.only-light { display: none; }
 
+/* 仅在没有手动设置主题时跟随系统 */
 @media (prefers-color-scheme: dark) {
-  .affiliation_logos img.only-dark { display: block; }
-  .affiliation_logos img.only-light { display: none; }
+  html:not([data-theme="light"]) .affiliation_logos img.only-dark { display: block; }
+  html:not([data-theme="light"]) .affiliation_logos img.only-light { display: none; }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   .affiliation_logos a {
-//     border-color: rgba(255, 255, 255, 0.18);
-//   }
-// }
