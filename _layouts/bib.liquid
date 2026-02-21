@@ -238,31 +238,31 @@
         {% endif %}
       {% endif %}
       {% if entry.video %}
-        <i><a href="{{ entry.video }}" style="font-weight: 500;">Video</a></i> /
+        <i><a href="{{ entry.video }}" style="font-weight: 500;">video</a></i> /
       {% endif %}
       {% if entry.blog %}
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">code</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
-          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">poster</a>
         {% else %}
           <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
         {% endif %}
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
-          <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+          <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">slides</a>
         {% else %}
           <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        {% comment %} <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a> {% endcomment %}
-        <i><a href="{{ entry.website }}" style="font-weight: 500;">Website</a></i>
+        {% comment %} <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">website</a> {% endcomment %}
+        <i><a href="{{ entry.website }}" style="font-weight: 500;">website</a></i>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
