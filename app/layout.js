@@ -6,6 +6,8 @@ import { siteConfig } from './data/siteConfig';
 const sourceSerif = Source_Serif_4({ subsets: ['latin'], variable: '--font-serif' });
 const spaceMono = Space_Mono({ subsets: ['latin'], variable: '--font-mono', weight: ['400', '700'], style: ['normal', 'italic'] });
 const siteIcon = siteConfig.branding.siteIcon;
+const siteUrl = siteConfig.branding.siteUrl;
+const canonicalUrl = `${siteUrl.replace(/\/+$/, '')}/`;
 const enableGoogleVerification = siteConfig.integrations.enableGoogleVerification;
 const enableBingVerification = siteConfig.integrations.enableBingVerification;
 const googleVerification = siteConfig.integrations.googleSiteVerification;
@@ -17,6 +19,10 @@ const googleTagManagerId = siteConfig.integrations.googleTagManagerId;
 export const metadata = {
   title: siteConfig.profile.name,
   description: siteConfig.profile.description,
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: siteIcon,
     shortcut: siteIcon,
@@ -43,6 +49,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <link rel="canonical" href={canonicalUrl} />
         <link rel="stylesheet" href="/vendor/icons/academicons-local.css" />
       </head>
       <body className={`${sourceSerif.variable} ${spaceMono.variable} antialiased`}>

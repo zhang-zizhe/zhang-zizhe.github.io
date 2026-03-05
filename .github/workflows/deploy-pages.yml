@@ -37,6 +37,9 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Write CNAME
+        run: echo "zizhe.io" > out/CNAME
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

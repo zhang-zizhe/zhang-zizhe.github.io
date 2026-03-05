@@ -6,6 +6,7 @@ export const siteConfig = {
   },
   branding: {
     siteIcon: '/favicon.ico',
+    siteUrl: 'https://zizhe.io',
   },
   links: {
     email: 'zizhe@seas.upenn.edu',
