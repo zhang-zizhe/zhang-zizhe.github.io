@@ -1,0 +1,74 @@
+export const publications = [
+  {
+    title: 'Viability-Preserving Passive Torque Control',
+    authors: [
+      { id: 'zizhe_zhang', mark: '*' },
+      { id: 'yicong_wang', mark: '*' },
+      { id: 'zhiquan_zhang' },
+      { id: 'tianyu_li' },
+      { id: 'nadia_figueroa' },
+    ],
+    venue: 'ICRA 2026',
+    awards: ["Best Contribution Award, E-RLC@IROS '25", "Best Student Paper Award, Building Safe Robots@IROS '25"],
+    links: [
+      { label: 'Awards', url: '/files/vpptcws_cmp.pdf' },
+      { label: 'arXiv', url: 'https://arxiv.org/abs/2510.03367' },
+      { label: 'PDF', url: 'https://arxiv.org/pdf/2510.03367.pdf' },
+      { label: 'Video', url: 'https://www.youtube.com/watch?v=GWP8MLrufxc' },
+      { label: 'Website', url: 'https://vpp-tc.github.io/webpage/' },
+    ],
+  },
+  {
+    title: 'Flow with the Force Field: Learning 3D Compliant Flow Matching Policies',
+    authors: [
+      { id: 'tianyu_li', mark: '*' },
+      { id: 'yihan_li', mark: '*' },
+      { id: 'zizhe_zhang' },
+      { id: 'nadia_figueroa' },
+    ],
+    venue: 'ICRA 2026',
+    awards: [],
+    links: [
+      { label: 'arXiv', url: 'https://arxiv.org/abs/2510.02738' },
+      { label: 'PDF', url: 'https://arxiv.org/pdf/2510.02738.pdf' },
+      { label: 'Website', url: 'https://flow-with-the-force-field.github.io/webpage/' },
+    ],
+  },
+  {
+    title: 'VLMgineer: Vision Language Models as Robotic Toolsmiths',
+    authors: [
+      { id: 'george_j_gao', mark: '*' },
+      { id: 'tianyu_li', mark: '*' },
+      { id: 'junyao_shi' },
+      { id: 'zizhe_zhang', mark: '†' },
+      { id: 'yihan_li', mark: '†' },
+      { id: 'nadia_figueroa' },
+      { id: 'dinesh_jayaraman' },
+    ],
+    venue: 'ICLR 2026',
+    awards: ["Oral Spotlight, Robot Hardware-Aware Intelligence@RSS '25"],
+    links: [
+      { label: 'arXiv', url: 'https://arxiv.org/abs/2507.12644' },
+      { label: 'PDF', url: 'https://arxiv.org/pdf/2507.12644.pdf' },
+      { label: 'Website', url: 'https://vlmgineer.github.io/release.html' },
+    ],
+  },
+  {
+    title: 'Image-Based Visual Servoing for Enhanced Cooperation of Dual-Arm Manipulation',
+    authors: [
+      { id: 'zizhe_zhang' },
+      { id: 'yuan_yang' },
+      { id: 'wenqiang_zuo' },
+      { id: 'guangming_song' },
+      { id: 'aiguo_song' },
+      { id: 'yang_shi' },
+    ],
+    venue: 'RA-L 2025',
+    awards: [],
+    links: [
+      { label: 'arXiv', url: 'https://arxiv.org/abs/2410.19432' },
+      { label: 'PDF', url: 'https://arxiv.org/pdf/2410.19432.pdf' },
+      { label: 'Website', url: 'https://zizhe.io/ral-ibvs-enhanced/' },
+    ],
+  },
+];

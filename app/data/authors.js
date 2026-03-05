@@ -1,0 +1,16 @@
+export const authorDirectory = {
+  zizhe_zhang: { name: 'Zizhe Zhang', homepage: 'https://zizhe.io/', isSelf: true },
+  yicong_wang: { name: 'Yicong Wang', homepage: 'https://www.seas.upenn.edu/~yicongw/' },
+  zhiquan_zhang: { name: 'Zhiquan Zhang', homepage: 'https://scholar.google.com/citations?user=PKBNMoMAAAAJ&hl=en' },
+  tianyu_li: { name: 'Tianyu Li', homepage: 'http://imtianyuli.com/' },
+  nadia_figueroa: { name: 'Nadia Figueroa', homepage: 'https://nbfigueroa.github.io/' },
+  yihan_li: { name: 'Yihan Li', homepage: 'https://yihanli126.github.io/' },
+  george_j_gao: { name: 'George J. Gao', homepage: 'https://ggao22.github.io/' },
+  junyao_shi: { name: 'Junyao Shi', homepage: 'https://junyaoshi.github.io/' },
+  dinesh_jayaraman: { name: 'Dinesh Jayaraman', homepage: 'https://www.seas.upenn.edu/~dineshj/' },
+  yuan_yang: { name: 'Yuan Yang', homepage: 'https://scholar.google.com/citations?user=zuEsn_kAAAAJ&hl=en' },
+  wenqiang_zuo: { name: 'Wenqiang Zuo', homepage: 'https://www.researchgate.net/profile/Wenqiang-Zuo' },
+  guangming_song: { name: 'Guangming Song', homepage: 'https://orcid.org/0000-0002-6362-4043' },
+  aiguo_song: { name: 'Aiguo Song', homepage: 'https://scholar.google.com/citations?user=RjQ5TrEAAAAJ&hl=en' },
+  yang_shi: { name: 'Yang Shi', homepage: 'https://scholar.google.com/citations?user=LVnHobEAAAAJ&hl=en' },
+};
