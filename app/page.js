@@ -654,7 +654,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="order-4 mt-10 md:col-span-2 md:mt-16"
+            className="order-4 mt-6 md:col-span-2 md:mt-10"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
