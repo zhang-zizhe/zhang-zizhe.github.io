@@ -761,7 +761,8 @@ export default function HomePage() {
                           <a
                             key={link.label}
                             href={link.url}
-                            className={`theme-link font-mono text-sm transition ${link.label === 'Awards' ? 'font-bold' : ''}`}
+                            className={`font-mono text-sm transition ${link.label === 'Awards' ? 'font-bold' : 'theme-link'}`}
+                            style={link.label === 'Awards' ? { color: 'var(--award-text)' } : undefined}
                             rel="external nofollow noopener"
                             target="_blank"
                           >
