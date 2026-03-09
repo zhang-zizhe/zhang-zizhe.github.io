@@ -627,18 +627,15 @@ export default function HomePage() {
             variants={{ show: { transition: { staggerChildren: 0.12, delayChildren: 0.24 } } }}
           >
             <motion.p variants={itemAnim} className="text-base text-muted/80">
-              {personalIntro.cv.lead}
+              {personalIntro.cvContact.beforeCv}
               <a href={links.cv} className="font-semibold text-accent/95 hover:text-ink">
-                {personalIntro.cv.label}
+                {personalIntro.cvContact.cvLabel}
               </a>
-              {personalIntro.cv.tail}
-            </motion.p>
-            <motion.p variants={itemAnim} className="text-base text-muted/80">
-              {personalIntro.contact.lead}
+              {personalIntro.cvContact.afterCv}
               <a href={`mailto:${links.email}`} className="font-semibold text-accent/95 hover:text-ink">
-                {personalIntro.contact.linkLabel}
+                {personalIntro.cvContact.emailLabel}
               </a>
-              {personalIntro.contact.tail}
+              {personalIntro.cvContact.tail}
             </motion.p>
           </motion.div>
 
