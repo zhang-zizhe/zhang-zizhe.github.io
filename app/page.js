@@ -171,21 +171,31 @@ function HeroTypewriter() {
   const hasStarted = phase !== 'waiting';
   const visiblePrefix = FIXED_PREFIX.slice(0, typedPrefixLength);
 
+  const longestLine = heroTypeLines.reduce((a, b) => (a.length >= b.length ? a : b), '');
+
   return (
     <div className="hero-typewriter">
       <span className="hero-typewriter-glow" aria-hidden="true" />
-      <div className="hero-typewriter-inner">
+      <div className="hero-typewriter-inner relative">
         <RobotIcon />
-        <p className="hero-typewriter-text">
-          {hasStarted ? <span className="hero-typewriter-prefix">&gt; </span> : null}
-          <span className="hero-typewriter-main">{visiblePrefix}</span>
-          <span className="hero-typewriter-suffix">{typedText}</span>
-          {hasStarted ? (
-            <span className="hero-typewriter-caret" aria-hidden="true">
-              |
-            </span>
-          ) : null}
-        </p>
+        <div className="grid flex-1 items-center" style={{ gridTemplateColumns: '1fr' }}>
+          <p className="hero-typewriter-text invisible" style={{ gridArea: '1/1' }} aria-hidden="true">
+            <span className="hero-typewriter-prefix">&gt; </span>
+            <span className="hero-typewriter-main">{FIXED_PREFIX}</span>
+            <span className="hero-typewriter-suffix">{longestLine}</span>
+            <span className="hero-typewriter-caret">|</span>
+          </p>
+          <p className="hero-typewriter-text" style={{ gridArea: '1/1' }}>
+            {hasStarted ? <span className="hero-typewriter-prefix">&gt; </span> : null}
+            <span className="hero-typewriter-main">{visiblePrefix}</span>
+            <span className="hero-typewriter-suffix">{typedText}</span>
+            {hasStarted ? (
+              <span className="hero-typewriter-caret" aria-hidden="true">
+                |
+              </span>
+            ) : null}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -681,7 +691,7 @@ export default function HomePage() {
                   className="grid items-center gap-2 border-b border-line/35 py-3 first:pt-0 last:border-0 last:pb-0 md:grid-cols-[112px_1fr]"
                 >
                   <span className="self-center font-mono text-sm text-muted/55">{item.date}</span>
-                  <span className="self-center text-sm leading-6 text-muted/82">{item.text}</span>
+                  <span className="self-center text-base leading-6 text-muted/82">{item.text}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -690,6 +700,10 @@ export default function HomePage() {
 
         <section id="research" className="mb-24 space-y-8">
           <SectionTitle title="Selected Publications" />
+          <p className="text-base text-muted/70">
+            Listed in reverse chronological order. The full publication list is{' '}
+            <a href={links.scholar} className="font-semibold text-accent/95 hover:text-ink">here</a>.
+          </p>
           <div className="space-y-7">
             {publications.map((pub, idx) => (
               <DotCard key={pub.title}>
@@ -838,7 +852,7 @@ export default function HomePage() {
 
         <section className="mb-24 space-y-8">
           <SectionTitle title="Miscellaneous" />
-          <p className="text-sm leading-8 text-muted/82">
+          <p className="text-base leading-8 text-muted/82">
             CS2 and Football Manager enthusiast. Former varsity soccer player. Huge fan of{' '}
             <a href="https://www.lcfc.com/" className="theme-link" rel="external nofollow noopener" target="_blank">
               Leicester City
