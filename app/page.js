@@ -708,7 +708,12 @@ export default function HomePage() {
             {publications.map((pub, idx) => (
               <DotCard key={pub.title}>
                 <article
-                  className="group rounded-2xl border border-line/45 bg-panelSoft p-6 transition hover:border-accent/45 hover:bg-panelSoft"
+                  className="group cursor-pointer rounded-2xl border border-line/45 bg-panelSoft p-6 transition duration-300 hover:scale-[1.02] hover:border-accent/45 hover:bg-panelSoft"
+                  onClick={(e) => {
+                    if (e.target.closest('a')) return;
+                    const link = pub.links.find((l) => l.label === 'Website') || pub.links.find((l) => l.label === 'arXiv');
+                    if (link) window.open(link.url, '_blank', 'noopener,noreferrer');
+                  }}
                 >
                   <div className="flex flex-col gap-5 md:flex-row">
                     {pub.preview && (
