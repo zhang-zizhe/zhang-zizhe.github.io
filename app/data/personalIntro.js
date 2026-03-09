@@ -18,10 +18,10 @@ export const personalIntro = {
     text: "My research sits at the intersection of control theory, machine learning, and human-robot interaction. I want to make robots that are not only capable but genuinely trustworthy — systems you'd feel comfortable having in your home.",
   },
   cvContact: {
-    beforeCv: 'If you would like to know more, please check my ',
+    beforeCv: "If you'd like to learn more about my background and work, please feel free to check my ",
     cvLabel: 'CV',
-    afterCv: '. Interested in collaborating or have a question? Feel free to ',
-    emailLabel: 'drop me an email',
-    tail: ' — I\'d love to hear from you.',
+    afterCv: ". If you're interested in collaborating or have any questions, don't hesitate to reach out by ",
+    emailLabel: 'email',
+    tail: ". I'd love to hear from you.",
   },
 };
