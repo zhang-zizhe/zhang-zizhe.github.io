@@ -9,6 +9,7 @@ export const publications = [
       { id: 'nadia_figueroa' },
     ],
     venue: 'ICRA 2026',
+    preview: { type: 'video', src: '/pub_preview/vpptc_prev.mp4' },
     awards: ["Best Contribution Award, E-RLC@IROS '25", "Best Student Paper Award, Building Safe Robots@IROS '25"],
     links: [
       { label: 'Awards', url: '/files/vpptcws_cmp.pdf' },
@@ -27,6 +28,7 @@ export const publications = [
       { id: 'nadia_figueroa' },
     ],
     venue: 'ICRA 2026',
+    preview: { type: 'video', src: '/pub_preview/fff_preview.mp4' },
     awards: [],
     links: [
       { label: 'arXiv', url: 'https://arxiv.org/abs/2510.02738' },
@@ -46,6 +48,7 @@ export const publications = [
       { id: 'dinesh_jayaraman' },
     ],
     venue: 'ICLR 2026',
+    preview: { type: 'video', src: '/pub_preview/vlmgineer.mp4' },
     awards: ["Oral Spotlight, Robot Hardware-Aware Intelligence@RSS '25"],
     links: [
       { label: 'arXiv', url: 'https://arxiv.org/abs/2507.12644' },
@@ -64,6 +67,7 @@ export const publications = [
       { id: 'yang_shi' },
     ],
     venue: 'RA-L 2025',
+    preview: { type: 'image', src: '/pub_preview/ibvs.png' },
     awards: [],
     links: [
       { label: 'arXiv', url: 'https://arxiv.org/abs/2410.19432' },

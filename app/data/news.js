@@ -1,7 +1,16 @@
 export const news = [
   {
     date: '2026.01.31',
-    text: 'VPP-TC and Flow with the Force Field accepted to ICRA 2026; VLMgineer accepted to ICLR 2026.',
+    text: (
+      <>
+        <a href="https://arxiv.org/abs/2510.03367" className="theme-link" rel="external nofollow noopener" target="_blank">VPP-TC</a>
+        {' and '}
+        <a href="https://arxiv.org/abs/2510.02738" className="theme-link" rel="external nofollow noopener" target="_blank">Flow with the Force Field</a>
+        {' accepted to ICRA 2026; '}
+        <a href="https://arxiv.org/abs/2507.12644" className="theme-link" rel="external nofollow noopener" target="_blank">VLMgineer</a>
+        {' accepted to ICLR 2026.'}
+      </>
+    ),
   },
   {
     date: '2025.10.24',
