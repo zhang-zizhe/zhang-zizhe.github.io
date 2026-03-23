@@ -5,7 +5,7 @@ export const experienceService = {
       placeUrl: 'https://www.upenn.edu/',
       role: 'Graduate Research Assistant',
       lab: 'Figueroa Robotics Lab @ GRASP',
-      labUrl: 'https://nbfigueroa.github.io/',
+      labUrl: 'https://figueroa.seas.upenn.edu/',
       advisor: 'Prof. Nadia Figueroa',
       advisorUrl: 'https://nbfigueroa.github.io/',
       logoDark: '/img/affiliation/grasp_dark.svg',
