@@ -568,7 +568,7 @@ export default function HomePage() {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-line/55 bg-panel/95 backdrop-blur-md">
-        <div className="mx-auto flex h-12 w-full max-w-6xl items-center justify-between px-6 md:px-10">
+        <div className="mx-auto flex h-12 w-full max-w-6xl min-[1440px]:max-w-none min-[1440px]:w-[60%] items-center justify-between px-6 md:px-10">
           <div className="top-social flex items-center gap-3 text-[1.75rem] text-ink md:text-[1.8rem]">
             <a href={`mailto:${links.email}`} title="email" aria-label="email">
               <i className="fa-solid fa-envelope" />
@@ -599,11 +599,11 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main id="top" className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6 md:px-10 md:pt-8">
+      <main id="top" className="mx-auto w-full max-w-6xl min-[1440px]:max-w-none min-[1440px]:w-[60%] px-6 pb-20 pt-6 md:px-10 md:pt-8">
         <section className="mb-10 grid min-h-[calc(100vh-8rem)] content-center items-end gap-10 md:mb-12 md:gap-x-14 md:gap-y-6 md:grid-cols-[1.2fr_0.8fr]">
           <motion.div className="order-2 mt-6 space-y-7 md:order-1 md:mt-10" initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}>
             <motion.div variants={itemAnim}>
-              <h1 className="font-serif text-4xl leading-[1.08] text-ink md:text-6xl">{profile.name}</h1>
+              <h1 className="font-serif text-4xl leading-[1.08] text-ink md:text-5xl">{profile.name}</h1>
               <p className="mt-2 font-sans text-xl text-muted/80 md:text-2xl">{profile.nameZh}</p>
             </motion.div>
             <motion.p variants={itemAnim} className="md:max-w-xl text-[16.5px] leading-8 text-muted/85">
@@ -647,13 +647,16 @@ export default function HomePage() {
               </a>
               {personalIntro.cvContact.tail}
             </motion.p>
+            <motion.p variants={itemAnim} className="text-base text-muted/80">
+              <i className="fa-solid fa-microphone text-accent" /> Unsure how to pronounce my name? <em>Zizhe</em> sounds like <em>Dzuh-JUH</em> and <em>Zhang</em> sounds like <em>Jahng</em>.
+            </motion.p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.96, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-            className="order-1 mt-6 justify-self-center self-start md:order-2 md:mt-10 md:justify-self-end"
+            className="order-1 mt-6 justify-self-center self-end md:order-2 md:mb-10 md:mt-10 md:justify-self-end"
           >
             <div className="relative w-[80vw] max-w-[360px] md:w-[280px]">
               <div className="dot-shadow absolute -bottom-5 -right-5 h-full w-full rounded-2xl" />
@@ -782,20 +785,30 @@ export default function HomePage() {
           <SectionTitle title="Experience & Service" />
           <div className="grid gap-10 md:grid-cols-2 md:gap-16">
           <div className="space-y-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// EXPERIENCE</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// RESEARCH EXPERIENCE</p>
             <div className="space-y-6">
               {experienceService.educationExperience.map((item) => (
                 <DotCard key={item.place}>
-                  <div className="rounded-xl border border-line/45 bg-panel px-4 py-4">
-                    <p className="font-medium text-ink">
-                      {item.placeUrl ? (
-                        <a href={item.placeUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.place}</a>
-                      ) : item.place}
-                    </p>
-                    <p className="mt-1 text-sm text-muted/75">
-                      {item.role}{item.lab && <>, <a href={item.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.lab}</a></>}
-                    </p>
-                    <p className="mt-1 font-mono text-[11px] tracking-[0.08em] text-muted/55">{item.time}</p>
+                  <div className="flex items-center justify-between gap-4 rounded-xl border border-line/45 bg-panel px-4 py-4">
+                    <div>
+                      <p className="font-medium text-ink">
+                        {item.placeUrl ? (
+                          <a href={item.placeUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.place}</a>
+                        ) : item.place}
+                      </p>
+                      <p className="mt-1 text-sm text-muted/75">
+                        {item.role}
+                        {item.lab && <><br /><a href={item.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.lab}</a></>}
+                        {item.advisor && <><br />Advised by {item.advisorUrl ? <a href={item.advisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.advisor}</a> : item.advisor}</>}
+                      </p>
+                      <p className="mt-1 font-mono text-[11px] tracking-[0.08em] text-muted/55">{item.time}</p>
+                    </div>
+                    {item.logoDark && (
+                      <div className="h-20 w-20 shrink-0">
+                        <img src={item.logoDark} alt={item.place} className="h-full w-full object-contain logo-dark" />
+                        <img src={item.logoLight} alt={item.place} className="h-full w-full object-contain logo-light" />
+                      </div>
+                    )}
                   </div>
                 </DotCard>
               ))}
@@ -832,12 +845,6 @@ export default function HomePage() {
               </DotCard>
               <DotCard>
                 <div className="rounded-2xl border border-line/45 bg-panel p-5">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">Teaching</p>
-                  <p className="mt-3 text-sm leading-8 text-muted/82">{experienceService.service.teaching}</p>
-                </div>
-              </DotCard>
-              <DotCard>
-                <div className="rounded-2xl border border-line/45 bg-panel p-5">
                   <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">Volunteer</p>
                   <p className="mt-3 text-sm leading-8 text-muted/82">
                     <a
@@ -848,6 +855,15 @@ export default function HomePage() {
                     >
                       {experienceService.service.volunteer.label}
                     </a>
+                  </p>
+                </div>
+              </DotCard>
+              <DotCard>
+                <div className="rounded-2xl border border-line/45 bg-panel p-5">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">Teaching</p>
+                  <p className="mt-3 text-sm leading-7 text-muted/82">
+                    {experienceService.service.teaching.role}, {experienceService.service.teaching.course}
+                    <br />{experienceService.service.teaching.place}, {experienceService.service.teaching.time}
                   </p>
                 </div>
               </DotCard>
@@ -873,7 +889,7 @@ export default function HomePage() {
       </main>
 
       <footer>
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-6 py-8 md:px-10">
+        <div className="mx-auto flex w-full max-w-6xl min-[1440px]:max-w-none min-[1440px]:w-[60%] items-center justify-center px-6 py-8 md:px-10">
           <span className="font-serif text-sm tracking-[0.04em] text-muted/45">© 2023-2026 Zizhe Zhang</span>
         </div>
       </footer>

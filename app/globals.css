@@ -346,6 +346,11 @@ html[data-theme='light'] .floating-part {
   opacity: var(--float-opacity-light, 0.06);
 }
 
+.logo-light { display: none; }
+.logo-dark { display: block; }
+html[data-theme='light'] .logo-light { display: block; }
+html[data-theme='light'] .logo-dark { display: none; }
+
 @media (min-width: 1440px) {
   .floating-part {
     --float-scale: 1.2;

@@ -1,18 +1,39 @@
 export const experienceService = {
   educationExperience: [
     {
+      place: 'University of Pennsylvania',
+      placeUrl: 'https://www.upenn.edu/',
+      role: 'Graduate Research Assistant',
+      lab: 'Figueroa Robotics Lab @ GRASP',
+      labUrl: 'https://nbfigueroa.github.io/',
+      advisor: 'Prof. Nadia Figueroa',
+      advisorUrl: 'https://nbfigueroa.github.io/',
+      logoDark: '/img/affiliation/grasp_dark.svg',
+      logoLight: '/img/affiliation/grasp_light.svg',
+      time: '2024.11 - Present',
+    },
+    {
       place: 'Duke University',
       placeUrl: 'https://duke.edu/',
       role: 'Visiting Scholar',
-      lab: 'DexLab',
+      lab: 'Robot Dexterity Lab',
       labUrl: 'https://robotdexteritylab.com/',
+      advisor: 'Prof. Xianyi Cheng',
+      advisorUrl: 'https://robotdexteritylab.com/',
+      logoDark: '/img/affiliation/duke_dark.svg',
+      logoLight: '/img/affiliation/duke_light.svg',
       time: '2025.6 - 2025.8',
     },
     {
-      place: 'Schneider Electric',
-      placeUrl: 'https://www.se.com/',
-      role: 'Technical Intern, Shanghai',
-      time: '2023.6 - 2023.8',
+      place: 'Southeast University',
+      placeUrl: 'https://www.seu.edu.cn/',
+      role: 'Undergraduate Research Assistant',
+      lab: 'Robotic Perception and Control Lab',
+      advisor: 'Prof. Yuan Yang',
+      advisorUrl: 'https://scholar.google.com/citations?user=zuEsn_kAAAAJ&hl=en',
+      logoDark: '/img/affiliation/seulogo.svg',
+      logoLight: '/img/affiliation/seulogo.svg',
+      time: '2023.12 - 2024.8',
     },
   ],
   service: {
@@ -26,7 +47,12 @@ export const experienceService = {
     reviewerConferences: [
       { label: 'ICRA 2026', url: 'https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra' },
     ],
-    teaching: 'TA, ESE 5000 Linear Systems, Fall 2025, University of Pennsylvania',
+    teaching: {
+      role: 'Teaching Assistant',
+      course: 'ESE 5000 Linear Systems',
+      time: 'Fall 2025',
+      place: 'University of Pennsylvania',
+    },
     volunteer: {
       label: 'RSS 2025',
       url: 'https://roboticsconference.org/2025/',
