@@ -568,7 +568,7 @@ export default function HomePage() {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-line/55 bg-panel/95 backdrop-blur-md">
-        <div className="mx-auto flex h-12 w-full max-w-6xl min-[1440px]:max-w-none min-[1440px]:w-[60%] items-center justify-between px-6 md:px-10">
+        <div className="mx-auto flex h-12 w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] items-center justify-between px-6 md:px-10">
           <div className="top-social flex items-center gap-3 text-[1.75rem] text-ink md:text-[1.8rem]">
             <a href={`mailto:${links.email}`} title="email" aria-label="email">
               <i className="fa-solid fa-envelope" />
@@ -599,7 +599,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main id="top" className="mx-auto w-full max-w-6xl min-[1440px]:max-w-none min-[1440px]:w-[60%] px-6 pb-20 pt-6 md:px-10 md:pt-8">
+      <main id="top" className="mx-auto w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] px-6 pb-20 pt-6 md:px-10 md:pt-8">
         <section className="mb-10 grid min-h-[calc(100vh-8rem)] content-center items-end gap-10 md:mb-12 md:gap-x-14 md:gap-y-6 md:grid-cols-[1.2fr_0.8fr]">
           <motion.div className="order-2 mt-6 space-y-7 md:order-1 md:mt-10" initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}>
             <motion.div variants={itemAnim}>
@@ -889,7 +889,7 @@ export default function HomePage() {
       </main>
 
       <footer>
-        <div className="mx-auto flex w-full max-w-6xl min-[1440px]:max-w-none min-[1440px]:w-[60%] items-center justify-center px-6 py-8 md:px-10">
+        <div className="mx-auto flex w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] items-center justify-center px-6 py-8 md:px-10">
           <span className="font-serif text-sm tracking-[0.04em] text-muted/45">© 2023-2026 Zizhe Zhang</span>
         </div>
       </footer>
