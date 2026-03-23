@@ -804,7 +804,7 @@ export default function HomePage() {
                       <p className="mt-1 font-mono text-[11px] tracking-[0.08em] text-muted/55">{item.time}</p>
                     </div>
                     {item.logoDark && (
-                      <div className="h-20 w-20 shrink-0">
+                      <div className="h-24 w-24 shrink-0">
                         <img src={item.logoDark} alt={item.place} className="h-full w-full object-contain logo-dark" />
                         <img src={item.logoLight} alt={item.place} className="h-full w-full object-contain logo-light" />
                       </div>
