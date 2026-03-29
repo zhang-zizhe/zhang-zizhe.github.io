@@ -789,7 +789,13 @@ export default function HomePage() {
             <div className="space-y-6">
               {experienceService.educationExperience.map((item) => (
                 <DotCard key={item.place}>
-                  <div className="flex items-center justify-between gap-4 rounded-xl border border-line/45 bg-panel px-4 py-4">
+                  <div className="flex items-center gap-4 rounded-xl border border-line/45 bg-panel px-4 py-4">
+                    {item.logoDark && (
+                      <div className="h-24 w-24 shrink-0">
+                        <img src={item.logoDark} alt={item.place} className="h-full w-full object-contain logo-dark" />
+                        <img src={item.logoLight} alt={item.place} className="h-full w-full object-contain logo-light" />
+                      </div>
+                    )}
                     <div>
                       <p className="font-medium text-ink">
                         {item.placeUrl ? (
@@ -803,12 +809,6 @@ export default function HomePage() {
                       </p>
                       <p className="mt-1 font-mono text-[11px] tracking-[0.08em] text-muted/55">{item.time}</p>
                     </div>
-                    {item.logoDark && (
-                      <div className="h-24 w-24 shrink-0">
-                        <img src={item.logoDark} alt={item.place} className="h-full w-full object-contain logo-dark" />
-                        <img src={item.logoLight} alt={item.place} className="h-full w-full object-contain logo-light" />
-                      </div>
-                    )}
                   </div>
                 </DotCard>
               ))}
