@@ -708,7 +708,7 @@ export default function HomePage() {
             <a href={links.scholar} className="font-semibold text-accent/95 hover:text-ink">here</a>.
           </p>
           <div className="space-y-7">
-            {publications.map((pub, idx) => (
+            {publications.filter((pub) => pub.selected).map((pub, idx) => (
               <DotCard key={pub.title}>
                 <article
                   className="group cursor-pointer rounded-2xl border border-line/45 bg-panelSoft p-6 transition duration-300 hover:scale-[1.02] hover:border-accent/45 hover:bg-panelSoft"
