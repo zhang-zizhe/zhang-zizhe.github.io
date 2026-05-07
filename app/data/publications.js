@@ -70,7 +70,7 @@ export const publications = [
       { id: 'yang_shi' },
     ],
     venue: 'RA-L 2025',
-    selected: true,
+    selected: false,
     preview: { type: 'image', src: '/pub_preview/ibvs.png' },
     awards: [],
     links: [

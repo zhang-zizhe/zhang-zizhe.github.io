@@ -527,23 +527,24 @@ function AuthorList({ authors }) {
     <p className="mt-3 font-mono text-sm leading-7 text-muted/78">
       {authors.map((author, idx) => {
         const profile = authorDirectory[author.id] || { name: author.id };
-        const displayName = `${profile.name}${author.mark || ''}`;
         const isLast = idx === authors.length - 1;
         const isSecondLast = idx === authors.length - 2;
         const separator = isLast ? '' : isSecondLast ? ', and ' : ', ';
         const nameClass = profile.isSelf
           ? 'text-ink underline decoration-accent/60 underline-offset-2'
-          : 'text-muted/78 transition hover:text-ink';
+          : 'text-muted/78 transition hover:text-accent';
+        const mark = author.mark === '*' ? <sup>*</sup> : author.mark || '';
 
         return (
           <span key={`${author.id}-${idx}`}>
             {profile.homepage ? (
               <a href={profile.homepage} className={nameClass} rel="external nofollow noopener" target="_blank">
-                {displayName}
+                {profile.name}
               </a>
             ) : (
-              <span className={profile.isSelf ? nameClass : ''}>{displayName}</span>
+              <span className={profile.isSelf ? nameClass : ''}>{profile.name}</span>
             )}
+            {mark}
             {separator}
           </span>
         );
@@ -704,7 +705,7 @@ export default function HomePage() {
         <section id="research" className="mb-24 space-y-8">
           <SectionTitle title="Publications" />
           <p className="text-base text-muted/70">
-            Listed in reverse chronological order. <span className="font-mono">*</span> and <span className="font-mono">†</span> denote equal contribution; highlighted entries are selected works. The up-to-date publication list is{' '}
+            Listed in reverse chronological order. <sup className="font-mono">*</sup> and <span className="font-mono">†</span> denote equal contribution; highlighted entries are selected works. The up-to-date publication list is{' '}
             <a href={links.scholar} className="font-semibold text-accent/95 hover:text-ink">here</a>.
           </p>
           <div className="space-y-7">
