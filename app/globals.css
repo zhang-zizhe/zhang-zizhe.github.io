@@ -129,6 +129,34 @@ html[data-theme='light'] .card-dot-bg {
   background-image: radial-gradient(rgba(56, 114, 224, 0.18) 1.5px, transparent 1.5px);
 }
 
+.card-dot-bg-selected {
+  background-image: radial-gradient(rgba(122, 162, 255, 0.95) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+  transition: background-image 0.25s ease;
+}
+
+html[data-theme='light'] .card-dot-bg-selected {
+  background-image: radial-gradient(rgba(56, 114, 224, 0.7) 1.5px, transparent 1.5px);
+}
+
+.card-bg-selected {
+  background-color: rgb(58, 66, 86);
+  border-color: rgba(122, 162, 255, 0.45);
+}
+
+.card-bg-selected:hover {
+  border-color: rgba(122, 162, 255, 0.7);
+}
+
+html[data-theme='light'] .card-bg-selected {
+  background-color: rgb(226, 226, 226);
+  border-color: rgba(56, 114, 224, 0.4);
+}
+
+html[data-theme='light'] .card-bg-selected:hover {
+  border-color: rgba(56, 114, 224, 0.65);
+}
+
 .top-social a {
   color: inherit;
   text-decoration: none;

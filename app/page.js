@@ -74,7 +74,7 @@ function ThemeToggle() {
   );
 }
 
-function DotCard({ children, className = '', ...props }) {
+function DotCard({ children, className = '', highlight = false, ...props }) {
   return (
     <motion.div
       className="relative"
@@ -83,7 +83,7 @@ function DotCard({ children, className = '', ...props }) {
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="card-dot-bg absolute -bottom-3 -right-3 h-full w-full rounded-2xl" />
+      <div className={`${highlight ? 'card-dot-bg-selected' : 'card-dot-bg'} absolute -bottom-3 -right-3 h-full w-full rounded-2xl`} />
       <div className={`relative ${className}`} {...props}>
         {children}
       </div>
@@ -702,16 +702,20 @@ export default function HomePage() {
         </section>
 
         <section id="research" className="mb-24 space-y-8">
-          <SectionTitle title="Selected Publications" />
+          <SectionTitle title="Publications" />
           <p className="text-base text-muted/70">
-            Listed in reverse chronological order. The full publication list is{' '}
+            Listed in reverse chronological order. <span className="font-mono">*</span> and <span className="font-mono">†</span> denote equal contribution; highlighted entries are selected works. The up-to-date publication list is{' '}
             <a href={links.scholar} className="font-semibold text-accent/95 hover:text-ink">here</a>.
           </p>
           <div className="space-y-7">
-            {publications.filter((pub) => pub.selected).map((pub, idx) => (
-              <DotCard key={pub.title}>
+            {publications.map((pub, idx) => (
+              <DotCard key={pub.title} highlight={pub.selected}>
                 <article
-                  className="group cursor-pointer rounded-2xl border border-line/45 bg-panelSoft p-6 transition duration-300 hover:scale-[1.02] hover:border-accent/45 hover:bg-panelSoft"
+                  className={`group cursor-pointer rounded-2xl border p-6 transition duration-300 hover:scale-[1.02] ${
+                    pub.selected
+                      ? 'card-bg-selected'
+                      : 'border-line/45 bg-panelSoft hover:border-accent/45 hover:bg-panelSoft'
+                  }`}
                   onClick={(e) => {
                     if (e.target.closest('a')) return;
                     const link = pub.links.find((l) => l.label === 'Website') || pub.links.find((l) => l.label === 'arXiv');
