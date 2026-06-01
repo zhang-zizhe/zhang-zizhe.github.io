@@ -788,7 +788,7 @@ export default function HomePage() {
 
         <section id="about" className="mb-24 space-y-8">
           <SectionTitle title="Experience & Service" />
-          <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+          <div className="grid gap-10 md:grid-cols-[11fr_9fr] md:gap-16">
           <div className="space-y-6">
             <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// RESEARCH EXPERIENCE</p>
             <div className="space-y-6">
@@ -807,12 +807,18 @@ export default function HomePage() {
                           <a href={item.placeUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.place}</a>
                         ) : item.place}
                       </p>
-                      <p className="mt-1 text-sm text-muted/75">
-                        {item.role}
-                        {item.lab && <><br /><a href={item.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.lab}</a></>}
-                        {item.advisor && <><br />Advised by {item.advisorUrl ? <a href={item.advisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.advisor}</a> : item.advisor}</>}
-                      </p>
-                      <p className="mt-1 font-mono text-[11px] tracking-[0.08em] text-muted/55">{item.time}</p>
+                      {(item.roles ?? [{ role: item.role, time: item.time }]).map((r, idx) => (
+                        <div key={r.role} className={idx > 0 ? 'mt-[1px]' : ''}>
+                          <p className="mt-1 text-sm text-ink">{r.role}</p>
+                          <p className="mt-[1px] font-mono text-[11px] tracking-[0.08em] text-ink">{r.time}</p>
+                        </div>
+                      ))}
+                      {(item.lab || item.advisor) && (
+                        <p className="mt-1 text-sm text-ink">
+                          {item.lab && <a href={item.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.lab}</a>}
+                          {item.advisor && <>{item.lab && <br />}Advised by {item.advisorUrl ? <a href={item.advisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.advisor}</a> : item.advisor}</>}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </DotCard>
@@ -820,7 +826,23 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-10">
+            <div className="space-y-6">
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// TEACHING EXPERIENCE</p>
+            <div className="space-y-6">
+              <DotCard>
+                <div className="rounded-2xl border border-line/45 bg-panel p-5">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">{experienceService.service.teaching.role}</p>
+                  <p className="mt-3 text-sm leading-7 text-muted/82">
+                    {experienceService.service.teaching.course}
+                    <br />{experienceService.service.teaching.place}, {experienceService.service.teaching.time}
+                  </p>
+                </div>
+              </DotCard>
+            </div>
+            </div>
+
+            <div className="space-y-6">
             <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// SERVICE</p>
             <div className="space-y-6">
               <DotCard>
@@ -863,15 +885,7 @@ export default function HomePage() {
                   </p>
                 </div>
               </DotCard>
-              <DotCard>
-                <div className="rounded-2xl border border-line/45 bg-panel p-5">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">Teaching</p>
-                  <p className="mt-3 text-sm leading-7 text-muted/82">
-                    {experienceService.service.teaching.role}, {experienceService.service.teaching.course}
-                    <br />{experienceService.service.teaching.place}, {experienceService.service.teaching.time}
-                  </p>
-                </div>
-              </DotCard>
+            </div>
             </div>
           </div>
           </div>

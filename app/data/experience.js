@@ -3,14 +3,16 @@ export const experienceService = {
     {
       place: 'University of Pennsylvania',
       placeUrl: 'https://www.upenn.edu/',
-      role: 'Graduate Research Assistant',
+      roles: [
+        { role: 'Research Engineer', time: '2026.6 - Present' },
+        { role: 'Graduate Research Assistant', time: '2024.11 - 2026.5' },
+      ],
       lab: 'Figueroa Robotics Lab @ GRASP',
       labUrl: 'https://figueroa.seas.upenn.edu/',
       advisor: 'Prof. Nadia Figueroa',
       advisorUrl: 'https://nbfigueroa.github.io/',
       logoDark: '/img/affiliation/grasp_dark.svg',
       logoLight: '/img/affiliation/grasp_light.svg',
-      time: '2024.11 - Present',
     },
     {
       place: 'Duke University',
