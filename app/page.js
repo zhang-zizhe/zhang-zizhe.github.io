@@ -612,6 +612,10 @@ export default function HomePage() {
               <a href={personalIntro.bio.phdUrl} className="theme-link" rel="external nofollow noopener" target="_blank">
                 {personalIntro.bio.phdName}
               </a>
+              {personalIntro.bio.beforeAdvisor}
+              <a href={personalIntro.bio.phdAdvisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">
+                {personalIntro.bio.phdAdvisorName}
+              </a>
               {personalIntro.bio.beforeAffiliations}
               {personalIntro.bio.affiliations.map((aff, i, arr) => (
                 <span key={aff.short}>

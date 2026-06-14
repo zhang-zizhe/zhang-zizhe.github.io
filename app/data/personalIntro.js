@@ -3,7 +3,10 @@ export const personalIntro = {
     beforePhd: 'I am an incoming CS PhD student at ',
     phdName: 'Johns Hopkins University',
     phdUrl: 'https://www.cs.jhu.edu/',
-    beforeAffiliations: ', also affiliated with ',
+    beforeAdvisor: ', advised by ',
+    phdAdvisorName: 'Prof. Haimin Hu',
+    phdAdvisorUrl: 'https://haiminhu.org/',
+    beforeAffiliations: ' and affiliated with ',
     affiliations: [
       { short: 'DSAI', name: 'Data Science & AI Institute', url: 'https://ai.jhu.edu/' },
       { short: 'LCSR', name: 'Laboratory for Computational Sensing and Robotics', url: 'https://lcsr.jhu.edu/' },
