@@ -1,5 +1,27 @@
 export const news = [
   {
+    date: '2026.06.01',
+    text: (
+      <>
+        {'Will continue my research at '}
+        <a href="https://figueroa.seas.upenn.edu/" className="theme-link" rel="external nofollow noopener" target="_blank">Figueroa Robotics Lab</a>
+        {' at '}
+        <a href="https://www.grasp.upenn.edu/" className="theme-link" rel="external nofollow noopener" target="_blank">GRASP</a>
+        {' as a Research Engineer for the summer.'}
+      </>
+    ),
+  },
+  {
+    date: '2026.04.15',
+    text: (
+      <>
+        {'Will join '}
+        <a href="https://www.cs.jhu.edu/" className="theme-link" rel="external nofollow noopener" target="_blank">Johns Hopkins University</a>
+        {' to start my PhD this August.'}
+      </>
+    ),
+  },
+  {
     date: '2026.01.31',
     text: (
       <>

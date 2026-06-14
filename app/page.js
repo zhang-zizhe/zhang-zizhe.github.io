@@ -608,6 +608,19 @@ export default function HomePage() {
               <p className="mt-2 font-sans text-xl text-muted/80 md:text-2xl">{profile.nameZh}</p>
             </motion.div>
             <motion.p variants={itemAnim} className="md:max-w-xl text-[16.5px] leading-8 text-muted/85">
+              {personalIntro.bio.beforePhd}
+              <a href={personalIntro.bio.phdUrl} className="theme-link" rel="external nofollow noopener" target="_blank">
+                {personalIntro.bio.phdName}
+              </a>
+              {personalIntro.bio.beforeAffiliations}
+              {personalIntro.bio.affiliations.map((aff, i, arr) => (
+                <span key={aff.short}>
+                  <a href={aff.url} title={aff.name} className="theme-link" rel="external nofollow noopener" target="_blank">
+                    {aff.short}
+                  </a>
+                  {i < arr.length - 2 ? ', ' : i === arr.length - 2 ? ', and ' : ''}
+                </span>
+              ))}
               {personalIntro.bio.beforeLab}
               <a href={personalIntro.bio.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">
                 {personalIntro.bio.labName}

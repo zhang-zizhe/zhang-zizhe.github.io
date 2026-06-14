@@ -1,6 +1,15 @@
 export const personalIntro = {
   bio: {
-    beforeLab: "I'm currently a second-year master student in Robotics and graduate research intern at ",
+    beforePhd: 'I am an incoming CS PhD student at ',
+    phdName: 'Johns Hopkins University',
+    phdUrl: 'https://www.cs.jhu.edu/',
+    beforeAffiliations: ', also affiliated with ',
+    affiliations: [
+      { short: 'DSAI', name: 'Data Science & AI Institute', url: 'https://ai.jhu.edu/' },
+      { short: 'LCSR', name: 'Laboratory for Computational Sensing and Robotics', url: 'https://lcsr.jhu.edu/' },
+      { short: 'IAA', name: 'Institute for Assured Autonomy', url: 'https://iaa.jhu.edu/' },
+    ],
+    beforeLab: '. I finished my M.S.E. in Robotics at ',
     labName: 'Penn GRASP Lab',
     labUrl: 'https://www.grasp.upenn.edu/',
     afterLab: ', advised by ',
