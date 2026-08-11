@@ -22,6 +22,7 @@ export const experienceService = {
       labUrl: 'https://robotdexteritylab.com/',
       advisor: 'Prof. Xianyi Cheng',
       advisorUrl: 'https://robotdexteritylab.com/',
+      advisorLabel: 'Hosted by',
       logoDark: '/img/affiliation/duke_dark.svg',
       logoLight: '/img/affiliation/duke_light.svg',
       time: '2025.6 - 2025.8',

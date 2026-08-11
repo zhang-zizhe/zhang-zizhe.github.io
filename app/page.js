@@ -833,7 +833,7 @@ export default function HomePage() {
                       {(item.lab || item.advisor) && (
                         <p className="mt-1 text-sm text-ink">
                           {item.lab && <a href={item.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.lab}</a>}
-                          {item.advisor && <>{item.lab && <br />}Advised by {item.advisorUrl ? <a href={item.advisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.advisor}</a> : item.advisor}</>}
+                          {item.advisor && <>{item.lab && <br />}{item.advisorLabel ?? 'Advised by'} {item.advisorUrl ? <a href={item.advisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.advisor}</a> : item.advisor}</>}
                         </p>
                       )}
                     </div>
