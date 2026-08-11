@@ -1,10 +1,11 @@
-import { Space_Mono, Source_Serif_4 } from 'next/font/google';
+import { IBM_Plex_Mono, Space_Mono } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { siteConfig } from './data/siteConfig';
 
-const sourceSerif = Source_Serif_4({ subsets: ['latin'], variable: '--font-serif' });
-const spaceMono = Space_Mono({ subsets: ['latin'], variable: '--font-mono', weight: ['400', '700'], style: ['normal', 'italic'] });
+// Site-wide code font; Space Mono stays scoped to the hero terminal.
+const plexMono = IBM_Plex_Mono({ subsets: ['latin'], variable: '--font-code', weight: ['400', '500', '600', '700'], style: ['normal', 'italic'] });
+const spaceMono = Space_Mono({ subsets: ['latin'], variable: '--font-terminal', weight: ['400', '700'], style: ['normal', 'italic'] });
 const siteIcon = siteConfig.branding.siteIcon;
 const siteUrl = siteConfig.branding.siteUrl;
 const canonicalUrl = `${siteUrl.replace(/\/+$/, '')}/`;
@@ -52,7 +53,7 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href={canonicalUrl} />
         <link rel="stylesheet" href="/vendor/icons/academicons-local.css" />
       </head>
-      <body className={`${sourceSerif.variable} ${spaceMono.variable} antialiased`}>
+      <body className={`${plexMono.variable} ${spaceMono.variable} antialiased`}>
         {googleTagManagerId ? (
           <>
             <Script id="google-tag-manager" strategy="afterInteractive">

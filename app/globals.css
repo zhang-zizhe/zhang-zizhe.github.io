@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --font-cjk: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', monospace;
   color-scheme: dark;
   --c-ink: 245 245 242;
   --c-muted: 180 180 175;
@@ -82,20 +83,25 @@ body {
 }
 
 body {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-code), var(--font-cjk);
   background: var(--bg-main);
   transition:
     background-color 0.25s ease,
     color 0.25s ease;
 }
 
+/* One code font for the whole page — headings, body and meta alike. */
 .font-sans,
-.font-serif {
-  font-family: var(--font-serif), serif;
+.font-serif,
+.font-mono {
+  font-family: var(--font-code), var(--font-cjk);
 }
 
-.font-mono {
-  font-family: var(--font-mono), monospace;
+/* Syntax-ish prefixes: #, ##, //, [n] */
+.code-marker {
+  color: rgb(var(--c-accent) / 0.72);
+  letter-spacing: 0.12em;
+  user-select: none;
 }
 
 .noise-overlay {
@@ -236,7 +242,7 @@ html[data-theme='light'] .hero-typewriter {
   position: relative;
   z-index: 4;
   margin: 0;
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-terminal), monospace;
   font-weight: 400;
   font-size: clamp(0.98rem, 1.24vw, 1.14rem);
   line-height: 1.7;

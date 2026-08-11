@@ -12,9 +12,9 @@ const config = {
         accent: 'rgb(var(--c-accent) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['var(--font-serif)', 'serif'],
-        serif: ['var(--font-serif)', 'serif'],
-        mono: ['var(--font-mono)', 'monospace'],
+        sans: ['var(--font-code)', 'var(--font-cjk)'],
+        serif: ['var(--font-code)', 'var(--font-cjk)'],
+        mono: ['var(--font-code)', 'var(--font-cjk)'],
       },
       boxShadow: {
         glow: '0 0 0 1px rgba(152, 240, 140, 0.18), 0 22px 64px rgba(0, 0, 0, 0.35)',

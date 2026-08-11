@@ -45,7 +45,7 @@ function ThemeToggle() {
       type="button"
       onClick={toggle}
       whileTap={{ scale: 0.94 }}
-      className="relative flex h-8 w-8 items-center justify-center rounded-full border border-line/45 bg-panel/70 text-ink/90 transition hover:bg-panelSoft"
+      className="relative flex h-8 w-8 items-center justify-center border border-line/45 bg-panel/70 text-ink/90 transition hover:bg-panelSoft"
       title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
@@ -83,7 +83,7 @@ function DotCard({ children, className = '', highlight = false, ...props }) {
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className={`${highlight ? 'card-dot-bg-selected' : 'card-dot-bg'} absolute -bottom-3 -right-3 h-full w-full rounded-2xl`} />
+      <div className={`${highlight ? 'card-dot-bg-selected' : 'card-dot-bg'} absolute -bottom-3 -right-3 h-full w-full`} />
       <div className={`relative ${className}`} {...props}>
         {children}
       </div>
@@ -94,7 +94,11 @@ function DotCard({ children, className = '', highlight = false, ...props }) {
 function SectionTitle({ title }) {
   return (
     <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={itemAnim}>
-      <h2 className="font-serif text-3xl text-ink md:text-4xl">{title}</h2>
+      <h2 className="flex items-baseline gap-2.5 text-xl font-semibold tracking-[-0.01em] text-ink md:text-2xl">
+        <span className="code-marker">##</span>
+        {title}
+      </h2>
+      <div className="mt-3 h-px w-full bg-line/70" />
     </motion.div>
   );
 }
@@ -524,7 +528,7 @@ function RobotIcon() {
 
 function AuthorList({ authors }) {
   return (
-    <p className="mt-3 font-mono text-sm leading-7 text-muted/78">
+    <p className="mt-2.5 text-[13.5px] leading-[1.75] text-muted/78">
       {authors.map((author, idx) => {
         const profile = authorDirectory[author.id] || { name: author.id };
         const isLast = idx === authors.length - 1;
@@ -602,12 +606,18 @@ export default function HomePage() {
 
       <main id="top" className="mx-auto w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] px-6 pb-20 pt-6 md:px-10 md:pt-8">
         <section className="mb-10 grid min-h-[calc(100vh-8rem)] content-center items-end gap-10 md:mb-12 md:gap-x-14 md:gap-y-6 md:grid-cols-[1.2fr_0.8fr]">
-          <motion.div className="order-2 mt-6 space-y-7 md:order-1 md:mt-10" initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}>
+          <motion.div className="order-2 mt-6 space-y-5 md:order-1 md:mt-10" initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}>
             <motion.div variants={itemAnim}>
-              <h1 className="font-serif text-4xl leading-[1.08] text-ink md:text-5xl">{profile.name}</h1>
-              <p className="mt-2 font-sans text-xl text-muted/80 md:text-2xl">{profile.nameZh}</p>
+              <h1 className="flex items-baseline gap-3 text-3xl font-bold leading-[1.15] tracking-[-0.02em] text-ink md:text-4xl">
+                <span className="code-marker">#</span>
+                {profile.name}
+              </h1>
+              <p className="mt-1.5 flex items-baseline gap-3 text-lg text-muted/80 md:text-xl">
+                <span className="code-marker">#</span>
+                {profile.nameZh}
+              </p>
             </motion.div>
-            <motion.p variants={itemAnim} className="md:max-w-xl text-[16.5px] leading-8 text-muted/85">
+            <motion.p variants={itemAnim} className="md:max-w-xl text-[15px] leading-[1.75] text-muted/85">
               {personalIntro.bio.beforePhd}
               <a href={personalIntro.bio.phdUrl} className="theme-link" rel="external nofollow noopener" target="_blank">
                 {personalIntro.bio.phdName}
@@ -643,7 +653,7 @@ export default function HomePage() {
               </a>
               {personalIntro.bio.afterExchange}
             </motion.p>
-            <motion.p variants={itemAnim} className="md:max-w-xl text-[16.5px] leading-8 text-muted/85">
+            <motion.p variants={itemAnim} className="md:max-w-xl text-[15px] leading-[1.75] text-muted/85">
               {personalIntro.research.text}
             </motion.p>
           </motion.div>
@@ -654,7 +664,7 @@ export default function HomePage() {
             animate="show"
             variants={{ show: { transition: { staggerChildren: 0.12, delayChildren: 0.24 } } }}
           >
-            <motion.p variants={itemAnim} className="text-base text-muted/80">
+            <motion.p variants={itemAnim} className="text-[15px] leading-[1.75] text-muted/80">
               {personalIntro.cvContact.beforeCv}
               <a href={links.cv} className="font-semibold text-accent/95 hover:text-ink">
                 {personalIntro.cvContact.cvLabel}
@@ -665,7 +675,7 @@ export default function HomePage() {
               </a>
               {personalIntro.cvContact.tail}
             </motion.p>
-            <motion.p variants={itemAnim} className="text-base text-muted/80">
+            <motion.p variants={itemAnim} className="text-[15px] leading-[1.75] text-muted/80">
               <i className="fa-solid fa-microphone text-accent" /> Unsure how to pronounce my name? <em>Zizhe</em> sounds like <em>Dzuh-JUH</em> and <em>Zhang</em> sounds like <em>Jahng</em>.
             </motion.p>
           </motion.div>
@@ -677,8 +687,8 @@ export default function HomePage() {
             className="order-1 mt-6 justify-self-center self-end md:order-2 md:mb-10 md:mt-10 md:justify-self-end"
           >
             <div className="relative w-[80vw] max-w-[360px] md:w-[280px]">
-              <div className="dot-shadow absolute -bottom-5 -right-5 h-full w-full rounded-2xl" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line/45 bg-panel">
+              <div className="dot-shadow absolute -bottom-5 -right-5 h-full w-full" />
+              <div className="relative aspect-[4/5] overflow-hidden border border-line/45 bg-panel">
                 <img src={links.profileImage} alt={profile.name} className="h-full w-full object-cover" />
               </div>
             </div>
@@ -694,7 +704,7 @@ export default function HomePage() {
           </motion.div>
         </section>
 
-        <section className="mb-24 space-y-8">
+        <section className="mb-20 space-y-6">
           <SectionTitle title="News" />
           <DotCard>
             <motion.div
@@ -702,34 +712,35 @@ export default function HomePage() {
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
               variants={{ show: { transition: { staggerChildren: 0.06 } } }}
-              className="max-h-[280px] space-y-1 overflow-y-auto rounded-2xl border border-line/45 bg-panel p-5"
+              className="max-h-[280px] space-y-1 overflow-y-auto border border-line/45 bg-panel p-5"
             >
               {news.map((item, idx) => (
                 <motion.div
                   key={`${item.date}-${idx}`}
                   variants={itemAnim}
                   custom={idx + 1}
-                  className="grid items-center gap-2 border-b border-line/35 py-3 first:pt-0 last:border-0 last:pb-0 md:grid-cols-[112px_1fr]"
+                  className="grid items-start gap-2 border-b border-line/35 py-2.5 first:pt-0 last:border-0 last:pb-0 md:grid-cols-[124px_1fr]"
                 >
-                  <span className="self-center font-mono text-sm text-muted/55">{item.date}</span>
-                  <span className="self-center text-base leading-6 text-muted/82">{item.text}</span>
+                  <span className="text-[13px] leading-[1.7] text-accent/70">{item.date}</span>
+                  <span className="text-[14.5px] leading-[1.7] text-muted/82">{item.text}</span>
                 </motion.div>
               ))}
             </motion.div>
           </DotCard>
         </section>
 
-        <section id="research" className="mb-24 space-y-8">
+        <section id="research" className="mb-20 space-y-6">
           <SectionTitle title="Publications" />
-          <p className="text-base text-muted/70">
-            Listed in reverse chronological order. <sup className="font-mono">*</sup> and <span className="font-mono">†</span> denote equal contribution; highlighted entries are selected works. The up-to-date publication list is{' '}
+          <p className="text-[14px] leading-[1.75] text-muted/70">
+            <span className="code-marker">// </span>
+            Listed in reverse chronological order. <sup>*</sup> and <span>†</span> denote equal contribution; highlighted entries are selected works. The up-to-date publication list is{' '}
             <a href={links.scholar} className="font-semibold text-accent/95 hover:text-ink">here</a>.
           </p>
-          <div className="space-y-7">
-            {publications.map((pub, idx) => (
+          <div className="space-y-6">
+            {publications.map((pub) => (
               <DotCard key={pub.title} highlight={pub.selected}>
                 <article
-                  className={`group cursor-pointer rounded-2xl border p-6 transition duration-300 hover:scale-[1.02] ${
+                  className={`group cursor-pointer border p-6 transition duration-300 hover:scale-[1.02] ${
                     pub.selected
                       ? 'card-bg-selected'
                       : 'border-line/45 bg-panelSoft hover:border-accent/45 hover:bg-panelSoft'
@@ -742,7 +753,7 @@ export default function HomePage() {
                 >
                   <div className="flex flex-col gap-5 md:flex-row">
                     {pub.preview && (
-                      <div className="flex-shrink-0 self-center overflow-hidden rounded-lg md:w-[200px]">
+                      <div className="flex-shrink-0 self-center overflow-hidden border border-line/40 md:w-[200px]">
                         {pub.preview.type === 'video' ? (
                           <video
                             src={pub.preview.src}
@@ -762,31 +773,31 @@ export default function HomePage() {
                       </div>
                     )}
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-serif text-lg leading-snug text-ink md:text-xl">{pub.title}</h3>
+                      <h3 className="text-[15px] font-semibold leading-snug text-ink md:text-base">{pub.title}</h3>
                       <AuthorList authors={pub.authors} />
-                      <div className="mt-4 flex flex-wrap items-center gap-3">
+                      <div className="mt-3 flex flex-wrap items-center gap-2.5">
                         <span
-                          className="rounded-md border px-2 py-0.5 font-mono text-xs tracking-[0.08em]"
+                          className="border px-2 py-0.5 text-xs"
                           style={{ background: 'var(--venue-bg)', borderColor: 'var(--venue-border)', color: 'var(--venue-text)' }}
                         >
-                          {pub.venue}
+                          @{pub.venue}
                         </span>
                         {pub.awards.map((award) => (
                           <span
                             key={award}
-                            className="rounded-md border px-2 py-0.5 font-mono text-xs tracking-[0.04em]"
+                            className="border px-2 py-0.5 text-xs"
                             style={{ background: 'var(--award-bg)', borderColor: 'var(--award-border)', color: 'var(--award-text)' }}
                           >
                             {award}
                           </span>
                         ))}
                       </div>
-                      <div className="mt-4 flex flex-wrap gap-3">
+                      <div className="mt-3 flex flex-wrap gap-3">
                         {pub.links.map((link) => (
                           <a
                             key={link.label}
                             href={link.url}
-                            className={`font-mono text-sm transition ${link.label === 'Awards' ? 'font-bold' : 'theme-link'}`}
+                            className={`text-[13px] transition ${link.label === 'Awards' ? 'font-bold' : 'theme-link'}`}
                             style={link.label === 'Awards' ? { color: 'var(--award-text)' } : undefined}
                             rel="external nofollow noopener"
                             target="_blank"
@@ -803,15 +814,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="about" className="mb-24 space-y-8">
+        <section id="about" className="mb-20 space-y-6">
           <SectionTitle title="Experience & Service" />
           <div className="grid gap-10 md:grid-cols-[11fr_9fr] md:gap-16">
           <div className="space-y-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// RESEARCH EXPERIENCE</p>
+            <p className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>RESEARCH EXPERIENCE</p>
             <div className="space-y-6">
               {experienceService.educationExperience.map((item) => (
                 <DotCard key={item.place}>
-                  <div className="flex items-center gap-4 rounded-xl border border-line/45 bg-panel px-4 py-4">
+                  <div className="flex items-center gap-4 border border-line/45 bg-panel px-4 py-4">
                     {item.logoDark && (
                       <div className="h-24 w-24 shrink-0">
                         <img src={item.logoDark} alt={item.place} className="h-full w-full object-contain logo-dark" />
@@ -819,19 +830,19 @@ export default function HomePage() {
                       </div>
                     )}
                     <div>
-                      <p className="font-medium text-ink">
+                      <p className="text-[14.5px] font-semibold text-ink">
                         {item.placeUrl ? (
                           <a href={item.placeUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.place}</a>
                         ) : item.place}
                       </p>
                       {(item.roles ?? [{ role: item.role, time: item.time }]).map((r, idx) => (
                         <div key={r.role} className={idx > 0 ? 'mt-[1px]' : ''}>
-                          <p className="mt-1 text-sm text-ink">{r.role}</p>
-                          <p className="mt-[1px] font-mono text-[11px] tracking-[0.08em] text-ink">{r.time}</p>
+                          <p className="mt-1 text-[13.5px] leading-[1.6] text-ink">{r.role}</p>
+                          <p className="text-[11.5px] leading-[1.6] text-accent/70">{r.time}</p>
                         </div>
                       ))}
                       {(item.lab || item.advisor) && (
-                        <p className="mt-1 text-sm text-ink">
+                        <p className="mt-1 text-[13.5px] leading-[1.6] text-ink">
                           {item.lab && <a href={item.labUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.lab}</a>}
                           {item.advisor && <>{item.lab && <br />}{item.advisorLabel ?? 'Advised by'} {item.advisorUrl ? <a href={item.advisorUrl} className="theme-link" rel="external nofollow noopener" target="_blank">{item.advisor}</a> : item.advisor}</>}
                         </p>
@@ -845,12 +856,12 @@ export default function HomePage() {
 
           <div className="space-y-10">
             <div className="space-y-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// TEACHING EXPERIENCE</p>
+            <p className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>TEACHING EXPERIENCE</p>
             <div className="space-y-6">
               <DotCard>
-                <div className="rounded-2xl border border-line/45 bg-panel p-5">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">{experienceService.service.teaching.role}</p>
-                  <p className="mt-3 text-sm leading-7 text-muted/82">
+                <div className="border border-line/45 bg-panel p-5">
+                  <p className="text-[11px] uppercase tracking-[0.12em] text-muted/48"><span className="code-marker">#&nbsp;</span>{experienceService.service.teaching.role}</p>
+                  <p className="mt-2.5 text-[13.5px] leading-[1.7] text-muted/82">
                     {experienceService.service.teaching.course}
                     <br />{experienceService.service.teaching.place}, {experienceService.service.teaching.time}
                   </p>
@@ -860,12 +871,12 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/42">// SERVICE</p>
+            <p className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>SERVICE</p>
             <div className="space-y-6">
               <DotCard>
-                <div className="rounded-2xl border border-line/45 bg-panel p-5">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">Reviewer</p>
-                  <p className="mt-3 text-sm leading-8 text-muted/82">
+                <div className="border border-line/45 bg-panel p-5">
+                  <p className="text-[11px] uppercase tracking-[0.12em] text-muted/48"><span className="code-marker">#&nbsp;</span>Reviewer</p>
+                  <p className="mt-2.5 text-[13.5px] leading-[1.7] text-muted/82">
                     Journals: {experienceService.service.reviewerJournals.map((venue, idx) => (
                       <span key={venue.label}>
                         <a href={venue.url} className="theme-link" rel="external nofollow noopener" target="_blank">
@@ -875,7 +886,7 @@ export default function HomePage() {
                       </span>
                     ))}
                   </p>
-                  <p className="mt-1 text-sm leading-8 text-muted/82">
+                  <p className="mt-1 text-[13.5px] leading-[1.7] text-muted/82">
                     Conferences: {experienceService.service.reviewerConferences.map((venue, idx) => (
                       <span key={venue.label}>
                         <a href={venue.url} className="theme-link" rel="external nofollow noopener" target="_blank">
@@ -888,9 +899,9 @@ export default function HomePage() {
                 </div>
               </DotCard>
               <DotCard>
-                <div className="rounded-2xl border border-line/45 bg-panel p-5">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted/48">Volunteer</p>
-                  <p className="mt-3 text-sm leading-8 text-muted/82">
+                <div className="border border-line/45 bg-panel p-5">
+                  <p className="text-[11px] uppercase tracking-[0.12em] text-muted/48"><span className="code-marker">#&nbsp;</span>Volunteer</p>
+                  <p className="mt-2.5 text-[13.5px] leading-[1.7] text-muted/82">
                     <a
                       href={experienceService.service.volunteer.url}
                       className="theme-link"
@@ -908,9 +919,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-24 space-y-8">
+        <section className="mb-20 space-y-6">
           <SectionTitle title="Miscellaneous" />
-          <p className="text-base leading-8 text-muted/82">
+          <p className="text-[15px] leading-[1.75] text-muted/82">
             CS2 and Football Manager enthusiast. Former varsity soccer player. Huge fan of{' '}
             <a href="https://www.lcfc.com/" className="theme-link" rel="external nofollow noopener" target="_blank">
               Leicester City
@@ -926,7 +937,9 @@ export default function HomePage() {
 
       <footer>
         <div className="mx-auto flex w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] items-center justify-center px-6 py-8 md:px-10">
-          <span className="font-serif text-sm tracking-[0.04em] text-muted/45">© 2023-2026 Zizhe Zhang</span>
+          <span className="text-[13px] text-muted/45">
+            <span className="code-marker">//&nbsp;</span>© 2023-2026 Zizhe Zhang
+          </span>
         </div>
       </footer>
     </div>
