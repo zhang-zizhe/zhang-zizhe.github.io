@@ -98,7 +98,6 @@ function SectionTitle({ title }) {
         <span className="code-marker">##</span>
         {title}
       </h2>
-      <div className="mt-3 h-px w-full bg-line/70" />
     </motion.div>
   );
 }
@@ -681,9 +680,9 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 20 }}
+            initial={{ opacity: 0, scale: 0.96, y: 18 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="order-1 mt-6 justify-self-center self-end md:order-2 md:mb-10 md:mt-10 md:justify-self-end"
           >
             <div className="relative w-[80vw] max-w-[360px] md:w-[280px]">
@@ -698,7 +697,7 @@ export default function HomePage() {
             className="order-4 mt-6 md:col-span-2 md:mt-10"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
           >
             <HeroTypewriter />
           </motion.div>
@@ -729,13 +728,20 @@ export default function HomePage() {
           </DotCard>
         </section>
 
-        <section id="research" className="mb-20 space-y-6">
+        {/* 21px + the 3px half-leading above body text = 24px optical, matching the box-first sections */}
+        <section id="research" className="mb-20 space-y-[21px]">
           <SectionTitle title="Publications" />
-          <p className="text-[14px] leading-[1.75] text-muted/70">
+          <motion.p
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={itemAnim}
+            className="text-[14px] leading-[1.75] text-muted/70"
+          >
             <span className="code-marker">// </span>
             Listed in reverse chronological order. <sup>*</sup> and <span>†</span> denote equal contribution; highlighted entries are selected works. The up-to-date publication list is{' '}
             <a href={links.scholar} className="font-semibold text-accent/95 hover:text-ink">here</a>.
-          </p>
+          </motion.p>
           <div className="space-y-6">
             {publications.map((pub) => (
               <DotCard key={pub.title} highlight={pub.selected}>
@@ -818,7 +824,7 @@ export default function HomePage() {
           <SectionTitle title="Experience & Service" />
           <div className="grid gap-10 md:grid-cols-[11fr_9fr] md:gap-16">
           <div className="space-y-6">
-            <p className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>RESEARCH EXPERIENCE</p>
+            <motion.p initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={itemAnim} className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>RESEARCH EXPERIENCE</motion.p>
             <div className="space-y-6">
               {experienceService.educationExperience.map((item) => (
                 <DotCard key={item.place}>
@@ -856,7 +862,7 @@ export default function HomePage() {
 
           <div className="space-y-10">
             <div className="space-y-6">
-            <p className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>TEACHING EXPERIENCE</p>
+            <motion.p initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={itemAnim} className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>TEACHING EXPERIENCE</motion.p>
             <div className="space-y-6">
               <DotCard>
                 <div className="border border-line/45 bg-panel p-5">
@@ -871,7 +877,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-6">
-            <p className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>SERVICE</p>
+            <motion.p initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={itemAnim} className="text-[11px] uppercase tracking-[0.12em] text-muted/42"><span className="code-marker">//&nbsp;</span>SERVICE</motion.p>
             <div className="space-y-6">
               <DotCard>
                 <div className="border border-line/45 bg-panel p-5">
@@ -919,9 +925,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-20 space-y-6">
+        <section className="mb-20 space-y-[21px]">
           <SectionTitle title="Miscellaneous" />
-          <p className="text-[15px] leading-[1.75] text-muted/82">
+          <motion.p
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={itemAnim}
+            className="text-[15px] leading-[1.75] text-muted/82"
+          >
             CS2 and Football Manager enthusiast. Former varsity soccer player. Huge fan of{' '}
             <a href="https://www.lcfc.com/" className="theme-link" rel="external nofollow noopener" target="_blank">
               Leicester City
@@ -931,7 +943,7 @@ export default function HomePage() {
               Inter Milan
             </a>
             .
-          </p>
+          </motion.p>
         </section>
       </main>
 
