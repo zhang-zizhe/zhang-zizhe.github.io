@@ -9,7 +9,7 @@ export const siteConfig = {
     siteUrl: 'https://zizhe.io',
   },
   links: {
-    email: 'zizhe@seas.upenn.edu',
+    email: 'zizhe@cs.jhu.edu',
     github: 'https://github.com/zhang-zizhe',
     linkedin: 'https://www.linkedin.com/in/zizhe-zhang',
     scholar: 'https://scholar.google.com/citations?user=0OY7JKAAAAAJ',
