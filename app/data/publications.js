@@ -21,7 +21,7 @@ export const publications = [
     ],
   },
   {
-    title: 'Flow with the Force Field: Learning 3D Compliant Flow Matching Policies',
+    title: 'Flow with the Force Field: Learning 3D Compliant Flow Matching Policies from Force and Demonstration-Guided Simulation Data',
     authors: [
       { id: 'tianyu_li', mark: '*' },
       { id: 'yihan_li', mark: '*' },

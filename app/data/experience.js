@@ -45,6 +45,7 @@ export const experienceService = {
       { label: 'TIE', url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=41' },
       { label: 'TII', url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9424' },
       { label: 'RAL', url: 'https://www.ieee-ras.org/publications/ra-l' },
+      { label: 'JAS', url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6570654' },
       { label: 'MIR', url: 'https://link.springer.com/journal/11633' },
     ],
     reviewerConferences: [
@@ -52,7 +53,7 @@ export const experienceService = {
     ],
     teaching: {
       role: 'Teaching Assistant',
-      course: 'ESE 5000 Linear Systems',
+      course: 'ESE 5000 Linear Systems Theory',
       time: 'Fall 2025',
       place: 'University of Pennsylvania',
     },
