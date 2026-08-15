@@ -683,7 +683,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.96, y: 18 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="order-1 mt-6 justify-self-center self-end md:order-2 md:mb-10 md:mt-10 md:justify-self-end"
+            className="order-1 mt-6 justify-self-center self-end md:order-2 md:mb-10 md:mt-10"
           >
             <div className="relative w-[80vw] max-w-[360px] md:w-[280px]">
               <div className="dot-shadow absolute -bottom-5 -right-5 h-full w-full" />
