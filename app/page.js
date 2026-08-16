@@ -604,7 +604,9 @@ export default function HomePage() {
       </header>
 
       <main id="top" className="mx-auto w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] px-6 pb-20 pt-6 md:px-10 md:pt-8">
-        <section className="mb-10 grid min-h-[calc(100vh-8rem)] content-center items-end gap-10 md:mb-12 md:gap-x-14 md:gap-y-6 md:grid-cols-[1.2fr_0.8fr]">
+        {/* Text column keeps the width it had with the old 56px gutter (60% of content minus
+            that gutter); the photo column absorbs the whole reclaimed gap. */}
+        <section className="mb-10 grid min-h-[calc(100vh-8rem)] content-center items-end gap-10 md:mb-12 md:gap-x-0 md:gap-y-6 md:grid-cols-[calc((100%-3.5rem)*0.6)_1fr]">
           <motion.div className="order-2 mt-6 space-y-5 md:order-1 md:mt-10" initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}>
             <motion.div variants={itemAnim}>
               <h1 className="flex items-baseline gap-3 text-3xl font-bold leading-[1.15] tracking-[-0.02em] text-ink md:text-4xl">
@@ -683,7 +685,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.96, y: 18 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="order-1 mt-6 justify-self-center self-end md:order-2 md:mb-10 md:mt-10"
+            className="order-1 mt-6 justify-self-center self-end md:order-2 md:mt-0 md:self-center"
           >
             <div className="relative w-[80vw] max-w-[360px] md:w-[280px]">
               <div className="dot-shadow absolute -bottom-5 -right-5 h-full w-full" />
