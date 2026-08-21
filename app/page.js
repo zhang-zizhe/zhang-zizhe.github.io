@@ -788,7 +788,7 @@ export default function HomePage() {
                           className="border px-2 py-0.5 text-xs"
                           style={{ background: 'var(--venue-bg)', borderColor: 'var(--venue-border)', color: 'var(--venue-text)' }}
                         >
-                          @{pub.venue}
+                          {pub.venue}
                         </span>
                         {pub.awards.map((award) => (
                           <span
