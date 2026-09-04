@@ -1,6 +1,6 @@
 export const personalIntro = {
   bio: {
-    beforePhd: 'I am an incoming CS PhD student at ',
+    beforePhd: 'I am a CS PhD student at ',
     phdName: 'Johns Hopkins University',
     phdUrl: 'https://www.cs.jhu.edu/',
     beforeAdvisor: ', advised by ',
