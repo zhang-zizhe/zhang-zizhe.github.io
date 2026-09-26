@@ -44,8 +44,8 @@ export const publications = [
       { id: 'george_j_gao', mark: '*' },
       { id: 'tianyu_li', mark: '*' },
       { id: 'junyao_shi' },
-      { id: 'zizhe_zhang', mark: '†' },
       { id: 'yihan_li', mark: '†' },
+      { id: 'zizhe_zhang', mark: '†' },
       { id: 'nadia_figueroa' },
       { id: 'dinesh_jayaraman' },
     ],
@@ -70,7 +70,7 @@ export const publications = [
       { id: 'yang_shi' },
     ],
     venue: 'RA-L 2025',
-    selected: false,
+    selected: true,
     preview: { type: 'image', src: '/pub_preview/ibvs.png' },
     awards: [],
     links: [
