@@ -598,6 +598,15 @@ export default function HomePage() {
             >
               <i className="ai ai-google-scholar" />
             </a>
+            <a
+              href={links.booking}
+              title="Book a 15 min chat"
+              aria-label="Book a 15 min chat"
+              rel="external nofollow noopener"
+              target="_blank"
+            >
+              <i className="fa-regular fa-calendar-check" />
+            </a>
           </div>
           <ThemeToggle />
         </div>
@@ -673,6 +682,15 @@ export default function HomePage() {
               {personalIntro.cvContact.afterCv}
               <a href={`mailto:${links.email}`} className="font-semibold text-accent/95 hover:text-ink">
                 {personalIntro.cvContact.emailLabel}
+              </a>
+              {personalIntro.cvContact.afterEmail}
+              <a
+                href={links.booking}
+                className="font-semibold text-accent/95 hover:text-ink"
+                rel="external nofollow noopener"
+                target="_blank"
+              >
+                {personalIntro.cvContact.bookingLabel}
               </a>
               {personalIntro.cvContact.tail}
             </motion.p>
