@@ -45,7 +45,7 @@ function ThemeToggle() {
       type="button"
       onClick={toggle}
       whileTap={{ scale: 0.94 }}
-      className="relative flex h-8 w-8 items-center justify-center border border-line/45 bg-panel/70 text-ink/90 transition hover:bg-panelSoft"
+      className="relative flex h-8 w-8 items-center justify-center text-ink/90 transition hover:text-ink"
       title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
@@ -597,15 +597,6 @@ export default function HomePage() {
               target="_blank"
             >
               <i className="ai ai-google-scholar" />
-            </a>
-            <a
-              href={links.booking}
-              title="Book a 15 min chat"
-              aria-label="Book a 15 min chat"
-              rel="external nofollow noopener"
-              target="_blank"
-            >
-              <i className="fa-regular fa-calendar-check" />
             </a>
           </div>
           <ThemeToggle />
