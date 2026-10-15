@@ -35,7 +35,7 @@ export const personalIntro = {
     afterCv: ". If you're interested in collaborating or have any questions, don't hesitate to reach out by ",
     emailLabel: 'email',
     afterEmail: ' or ',
-    bookingLabel: 'booking a 15 min chat',
+    bookingLabel: 'booking a chat',
     tail: ". I'd love to hear from you.",
   },
 };

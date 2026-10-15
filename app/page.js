@@ -556,6 +556,20 @@ function AuthorList({ authors }) {
   );
 }
 
+function IconLabel({ icon, label }) {
+  // Keep the icon glued to the first word so a line never breaks right after the icon.
+  const [first, ...rest] = label.split(' ');
+  return (
+    <>
+      <span className="whitespace-nowrap">
+        <i className={`${icon} mr-[0.2em]`} />
+        {first}
+      </span>
+      {rest.length > 0 && ` ${rest.join(' ')}`}
+    </>
+  );
+}
+
 export default function HomePage() {
   const { profile, links } = siteConfig;
 
@@ -575,7 +589,7 @@ export default function HomePage() {
         <div className="mx-auto flex h-12 w-full max-w-6xl min-[1440px]:max-w-[965px] min-[1440px]:w-[60%] items-center justify-between px-6 md:px-10">
           <div className="top-social flex items-center gap-3 text-[1.75rem] text-ink md:text-[1.8rem]">
             <a href={`mailto:${links.email}`} title="email" aria-label="email">
-              <i className="fa-solid fa-envelope" />
+              <i className="fa-regular fa-envelope" />
             </a>
             <a href={links.github} title="GitHub" aria-label="GitHub" rel="external nofollow noopener" target="_blank">
               <i className="fa-brands fa-github" />
@@ -668,11 +682,11 @@ export default function HomePage() {
             <motion.p variants={itemAnim} className="text-[15px] leading-[1.75] text-muted/80">
               {personalIntro.cvContact.beforeCv}
               <a href={links.cv} className="font-semibold text-accent/95 hover:text-ink">
-                {personalIntro.cvContact.cvLabel}
+                <IconLabel icon="fa-regular fa-file-lines" label={personalIntro.cvContact.cvLabel} />
               </a>
               {personalIntro.cvContact.afterCv}
               <a href={`mailto:${links.email}`} className="font-semibold text-accent/95 hover:text-ink">
-                {personalIntro.cvContact.emailLabel}
+                <IconLabel icon="fa-regular fa-envelope" label={personalIntro.cvContact.emailLabel} />
               </a>
               {personalIntro.cvContact.afterEmail}
               <a
@@ -681,7 +695,7 @@ export default function HomePage() {
                 rel="external nofollow noopener"
                 target="_blank"
               >
-                {personalIntro.cvContact.bookingLabel}
+                <IconLabel icon="fa-regular fa-calendar-plus" label={personalIntro.cvContact.bookingLabel} />
               </a>
               {personalIntro.cvContact.tail}
             </motion.p>
