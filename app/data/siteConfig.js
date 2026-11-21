@@ -14,7 +14,7 @@ export const siteConfig = {
     linkedin: 'https://www.linkedin.com/in/zizhe-zhang',
     scholar: 'https://scholar.google.com/citations?user=0OY7JKAAAAAJ',
     booking: 'https://jhubluejays.zoom.us/zbook/zizhe-zhang/15-mins-with-zizhe',
-    cv: '/files/CV_ZZ.pdf',
+    cv: '/files/CV.pdf',
     profileImage: '/images/profile.jpg',
   },
   integrations: {
